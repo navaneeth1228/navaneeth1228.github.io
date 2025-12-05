@@ -3,101 +3,1022 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Navaneethakannan | Portfolio</title>
+  <title>Navaneethakannan Arumugam | AI Engineer & Data Scientist</title>
+  <meta name="description" content="Portfolio of Navaneethakannan (Navaneeth), Data Science professional and AI Engineer skilled in real-time analytics, predictive modeling, NLP and containerized deployment." />
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
   <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background: #f4f4f4; }
-    .container { max-width: 900px; margin: auto; padding: 20px; background: white; }
-    h1, h2 { color: #333; }
-    ul { padding-left: 20px; }
-    .section { margin-bottom: 30px; }
-    .contact a { color: #0077b5; text-decoration: none; }
-    .project, .experience-item { margin-bottom: 15px; }
+    :root {
+      --bg: #020617;
+      --bg-alt: #020617;
+      --card: #020617;
+      --accent: #6366f1;
+      --accent2: #22d3ee;
+      --accent-soft: rgba(99, 102, 241, 0.15);
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border: #1f2933;
+      --radius-lg: 18px;
+      --radius-xl: 26px;
+      --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.55);
+      --transition: all 0.2s ease;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background:
+        radial-gradient(circle at top, #111827 0, #020617 40%, #020617 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container {
+      width: min(1120px, 100% - 32px);
+      margin: 0 auto;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(
+        to bottom,
+        rgba(2, 6, 23, 0.96),
+        rgba(2, 6, 23, 0.76),
+        transparent
+      );
+      border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-circle {
+      width: 36px;
+      height: 36px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 20% 20%, #4f46e5, #06b6d4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 18px;
+      color: white;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.7);
+    }
+
+    .nav-name {
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .nav-role {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: none;
+      gap: 18px;
+      font-size: 14px;
+    }
+
+    .nav-links a {
+      position: relative;
+      padding-bottom: 4px;
+      color: var(--muted);
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(to right, #6366f1, #22d3ee);
+      border-radius: 999px;
+      transition: width 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      display: none;
+    }
+
+    @media (min-width: 768px) {
+      .nav-links {
+        display: flex;
+      }
+
+      .nav-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 8px 14px;
+        border-radius: 999px;
+        font-size: 13px;
+        border: 1px solid rgba(148, 163, 184, 0.35);
+        color: var(--muted);
+        background: radial-gradient(circle at top left, rgba(99, 102, 241, 0.18), transparent);
+      }
+
+      .nav-cta:hover {
+        color: var(--text);
+        border-color: rgba(129, 140, 248, 0.9);
+      }
+    }
+
+    /* Hero */
+    .hero {
+      padding: 42px 0 32px;
+    }
+
+    .hero-grid {
+      display: grid;
+      gap: 26px;
+    }
+
+    @media (min-width: 900px) {
+      .hero-grid {
+        grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+        align-items: center;
+      }
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 11px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #c7d2fe;
+      background: rgba(30, 64, 175, 0.6);
+      border: 1px solid rgba(129, 140, 248, 0.6);
+    }
+
+    .pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 0 6px rgba(34, 197, 94, 0.25);
+    }
+
+    .hero-title {
+      margin: 16px 0 10px;
+      font-size: clamp(30px, 5vw, 40px);
+      line-height: 1.1;
+    }
+
+    .hero-title span {
+      background: linear-gradient(to right, #e5e7eb, #a5b4fc);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 15px;
+      color: var(--muted);
+      max-width: 520px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .btn-primary,
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 14px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: var(--transition);
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(to right, #6366f1, #22d3ee);
+      color: white;
+      box-shadow: 0 18px 30px rgba(37, 99, 235, 0.5);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px) scale(1.01);
+      box-shadow: 0 24px 45px rgba(37, 99, 235, 0.6);
+    }
+
+    .btn-ghost {
+      background: rgba(15, 23, 42, 0.9);
+      border-color: rgba(148, 163, 184, 0.4);
+      color: var(--muted);
+    }
+
+    .btn-ghost:hover {
+      border-color: rgba(129, 140, 248, 0.8);
+      color: var(--text);
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 18px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .hero-meta strong {
+      color: #e5e7eb;
+      font-weight: 500;
+    }
+
+    .hero-card {
+      position: relative;
+      border-radius: var(--radius-xl);
+      padding: 18px 18px 18px;
+      background: radial-gradient(circle at 0 0, rgba(56, 189, 248, 0.2), transparent 55%),
+        radial-gradient(circle at 100% 0, rgba(129, 140, 248, 0.2), transparent 55%),
+        linear-gradient(145deg, #020617, #020617);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      box-shadow: var(--shadow-soft);
+      min-height: 220px;
+      overflow: hidden;
+    }
+
+    .hero-tag {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #a5b4fc;
+      margin-bottom: 4px;
+    }
+
+    .hero-card-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .hero-card-text {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 11px;
+    }
+
+    .badge {
+      padding: 4px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(15, 23, 42, 0.7);
+      color: #cbd5f5;
+    }
+
+    .orbit {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.35;
+    }
+
+    .orbit-inner {
+      position: absolute;
+      right: -70px;
+      bottom: -60px;
+      width: 240px;
+      height: 240px;
+      border-radius: 999px;
+      border: 1px dashed rgba(148, 163, 184, 0.5);
+    }
+
+    .orbit-dot {
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 30%, #e0f2fe, #38bdf8);
+      top: 18px;
+      left: 20%;
+      box-shadow: 0 0 40px rgba(56, 189, 248, 0.8);
+    }
+
+    /* Sections */
+    section {
+      padding: 32px 0;
+    }
+
+    .section-header {
+      margin-bottom: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .section-kicker {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #818cf8;
+    }
+
+    .section-title {
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .section-subtitle {
+      font-size: 13px;
+      color: var(--muted);
+      max-width: 560px;
+    }
+
+    /* Grid layouts */
+    .grid-2 {
+      display: grid;
+      gap: 18px;
+    }
+
+    @media (min-width: 900px) {
+      .grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    /* Cards */
+    .card {
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      background: radial-gradient(circle at top left, rgba(30, 64, 175, 0.35), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(15, 23, 42, 0.95), #020617 80%);
+      padding: 16px 16px 14px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.75);
+    }
+
+    .card-subtitle {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #a5b4fc;
+      margin-bottom: 4px;
+    }
+
+    .card-title {
+      font-size: 15px;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    .card-meta {
+      font-size: 11px;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .card-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 8px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .card-list li {
+      margin-bottom: 4px;
+      display: flex;
+      gap: 6px;
+    }
+
+    .card-list li::before {
+      content: "▹";
+      font-size: 12px;
+      color: #22d3ee;
+      margin-top: 2px;
+    }
+
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+      font-size: 11px;
+    }
+
+    .chip {
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      color: #cbd5f5;
+    }
+
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    @media (min-width: 700px) {
+      .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    .skills-group-title {
+      font-size: 13px;
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+
+    .skills-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      font-size: 11px;
+    }
+
+    .skills-tag {
+      padding: 4px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    /* Timeline */
+    .timeline {
+      border-left: 1px solid rgba(148, 163, 184, 0.35);
+      padding-left: 16px;
+      margin-left: 4px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .timeline-item {
+      position: relative;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -9px;
+      top: 4px;
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 25% 25%, #bfdbfe, #6366f1);
+      box-shadow: 0 0 20px rgba(129, 140, 248, 0.8);
+    }
+
+    .timeline-title {
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .timeline-meta {
+      font-size: 11px;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .timeline-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .timeline-list li {
+      margin-bottom: 4px;
+      display: flex;
+      gap: 6px;
+    }
+
+    .timeline-list li::before {
+      content: "▹";
+      color: #22d3ee;
+      font-size: 12px;
+      margin-top: 1px;
+    }
+
+    /* Contact */
+    .contact-box {
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      padding: 18px 16px;
+      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.2), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(79, 70, 229, 0.25), rgba(2, 6, 23, 0.96));
+      display: grid;
+      gap: 12px;
+    }
+
+    @media (min-width: 800px) {
+      .contact-box {
+        grid-template-columns: 1.5fr 1fr;
+        align-items: center;
+      }
+    }
+
+    .contact-title {
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .contact-text {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 13px;
+    }
+
+    .contact-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(15, 23, 42, 0.7);
+    }
+
+    .contact-links span {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    footer {
+      padding: 16px 0 26px;
+      font-size: 11px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    footer a {
+      color: #a5b4fc;
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Navaneethakannan Arumugam</h1>
-    <p class="contact">
-      📧 <a href="mailto:navaneethakannan2001@gmail.com">navaneethakannan2001@gmail.com</a><br>
-      💼 <a href="https://linkedin.com/in/nka2001">LinkedIn</a> | <a href="https://github.com/navaneeth1228">GitHub</a><br>
-      📞 +1 240-277-6151
-    </p>
+  <div class="page">
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="container nav-inner">
+        <div class="nav-left">
+          <div class="logo-circle">N</div>
+          <div>
+            <div class="nav-name">Navaneethakannan Arumugam</div>
+            <div class="nav-role">AI Engineer · Data Science</div>
+          </div>
+        </div>
+        <nav class="nav-links">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a class="nav-cta" href="#contact">Let’s connect</a>
+      </div>
+    </header>
 
-    <div class="section">
-      <h2>Experience</h2>
-      <div class="experience-item">
-        <strong>AI Applications Developer</strong> - Copani, Remote (Jan 2025 - May 2025)
-        <ul>
-          <li>Built AI-driven customer service apps using BERT, RoBERTa, and T5.</li>
-          <li>Integrated APIs and collaborated with cross-functional teams.</li>
-          <li>Used Python & Hugging Face to improve operational efficiency by 25%.</li>
-        </ul>
-      </div>
-      <div class="experience-item">
-        <strong>Web Developer Intern</strong> - NSIC, Chennai (Jul 2022 - Aug 2022)
-        <ul>
-          <li>Developed over 10 responsive web pages using HTML and CSS.</li>
-          <li>Improved UI leading to a 15% increase in user engagement.</li>
-        </ul>
-      </div>
-    </div>
+    <!-- Hero -->
+    <main>
+      <section class="hero" id="top">
+        <div class="container hero-grid">
+          <div>
+            <div class="pill">
+              <div class="pill-dot"></div>
+              Open to Opportunities · DMV Area · F-1 OPT
+            </div>
+            <h1 class="hero-title">
+              Hi, I’m <span>Navaneeth</span> — I build AI & data products that
+              turn complex signals into decisions.
+            </h1>
+            <p class="hero-subtitle">
+              Data Science professional with hands-on experience in real-time analytics,
+              predictive modeling, NLP, and containerized deployment. I design and deploy
+              AI solutions that deliver measurable impact in production environments.
+            </p>
+            <div class="hero-actions">
+              <!-- Update this href once your PDF is in the repo -->
+              <a class="btn-primary" href="Navaneethakannan_Arumugam_resume.pdf" target="_blank" rel="noopener">
+                View Résumé
+              </a>
+              <a class="btn-ghost" href="#projects">
+                Explore my work
+              </a>
+            </div>
+            <div class="hero-meta">
+              <div><strong>Current:</strong> AI Engineer Intern · Copani LLC</div>
+              <div><strong>Location:</strong> DMV area · Open to relocate</div>
+            </div>
+          </div>
 
-    <div class="section">
-      <h2>Projects</h2>
-      <div class="project">
-        <strong>Sales Index Forecasting</strong> [ML, PySpark, Streamlit]
-        <ul>
-          <li>Achieved 90% accuracy on FISERV data for sales predictions.</li>
-          <li>Deployed Streamlit app for real-time insights for 25+ businesses.</li>
-        </ul>
-      </div>
-      <div class="project">
-        <strong>Airbnb Price Predictor</strong> [ML, SQLite3, Docker, Streamlit]
-        <ul>
-          <li>Built ML model with 92% accuracy and deployed using Docker.</li>
-          <li>Integrated SQLite3 and hosted app via Streamlit.</li>
-        </ul>
-      </div>
-      <div class="project">
-        <strong>NASA Turbofan Engine RUL Prediction</strong> [Deep Learning, Streamlit]
-        <ul>
-          <li>Used TensorFlow to forecast Remaining Useful Life.</li>
-          <li>Implemented user-friendly dashboard using Streamlit.</li>
-        </ul>
-      </div>
-      <div class="project">
-        <strong>Face Recognition Attendance System</strong> [CNN, OpenCV]
-        <ul>
-          <li>Automated student attendance with high accuracy.</li>
-          <li>Used transfer learning and OpenCV.</li>
-        </ul>
-      </div>
-    </div>
+          <aside class="hero-card">
+            <div class="hero-tag">What I do</div>
+            <div class="hero-card-title">Applied AI & Data Science in the real world</div>
+            <p class="hero-card-text">
+              I work across the ML lifecycle: from data engineering and feature pipelines
+              to model design, experimentation, and deployment using modern MLOps practices.
+            </p>
+            <div class="hero-badges">
+              <span class="badge">NLP · Transformers · LLaMA3</span>
+              <span class="badge">PySpark · ETL · Streamlit</span>
+              <span class="badge">Docker · Cloud · Git</span>
+            </div>
+            <div class="orbit">
+              <div class="orbit-inner">
+                <div class="orbit-dot"></div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
 
-    <div class="section">
-      <h2>Innovation & Competition</h2>
-      <p><strong>Startup Boot Camp - Elysium Security</strong><br>
-        Developed AI-powered surveillance using YOLO for crime detection. Won 1st place at UB Startup Boot Camp.
-      </p>
-    </div>
+      <!-- About -->
+      <section id="about">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">About</div>
+            <div class="section-title">Who I am</div>
+            <p class="section-subtitle">
+              I’m a Data Science professional with a strong foundation in AI and ML,
+              currently pursuing my M.S. in Engineering Science (Data Science) at SUNY Buffalo.
+              I enjoy building end-to-end solutions — from data pipelines to intelligent applications.
+            </p>
+          </div>
 
-    <div class="section">
-      <h2>Education</h2>
-      <ul>
-        <li><strong>M.S. in Engineering Science (Data Science)</strong>, SUNY Buffalo (May 2025), GPA: 3.667/4</li>
-        <li><strong>B.E. in Computer Science (AI & ML)</strong>, Annamalai University (May 2023), GPA: 8.95/10</li>
-      </ul>
-    </div>
+          <div class="grid-2">
+            <div class="card">
+              <div class="card-title">What I’m focused on</div>
+              <ul class="card-list">
+                <li>Building NLP and LLM-powered workflows for automation and decision support.</li>
+                <li>Designing predictive models that are robust, explainable, and production-ready.</li>
+                <li>Creating analytics experiences with Streamlit that turn data into clear insights.</li>
+              </ul>
+              <div class="chip-row">
+                <span class="chip">Real-time analytics</span>
+                <span class="chip">Predictive modeling</span>
+                <span class="chip">Agentic AI</span>
+                <span class="chip">ML Engineering</span>
+              </div>
+            </div>
 
-    <div class="section">
-      <h2>Skills</h2>
-      <ul>
-        <li><strong>Languages:</strong> Python, Java, R, C/C++, SQL, Matlab, HTML, CSS</li>
-        <li><strong>Frameworks:</strong> TensorFlow, PyTorch, Scikit-learn, Streamlit, OpenCV, Hugging Face</li>
-        <li><strong>Tools:</strong> Docker, AWS, MySQL, SQLite3, Tableau, VS Code</li>
-        <li><strong>Soft Skills:</strong> Communication, Collaboration, Resilience</li>
-      </ul>
-    </div>
+            <div class="card">
+              <div class="card-title">Outside of work</div>
+              <ul class="card-list">
+                <li>Exploring new model architectures and open-source tools in the AI ecosystem.</li>
+                <li>Following fintech and business analytics use-cases where data drives strategy.</li>
+                <li>Experimenting with applied computer vision and intelligent automation ideas.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">Skills</div>
+            <div class="section-title">Tech stack & tools</div>
+            <p class="section-subtitle">
+              A blend of programming, machine learning, data engineering, and deployment skills
+              that lets me take ideas from prototype to production.
+            </p>
+          </div>
+
+          <div class="skills-grid">
+            <div class="card">
+              <div class="skills-group-title">Programming Languages</div>
+              <div class="skills-tags">
+                <span class="skills-tag">Python</span>
+                <span class="skills-tag">JAVA</span>
+                <span class="skills-tag">R</span>
+                <span class="skills-tag">C/C++</span>
+                <span class="skills-tag">SQL</span>
+                <span class="skills-tag">Matlab</span>
+                <span class="skills-tag">Spark</span>
+                <span class="skills-tag">Haskell</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="skills-group-title">ML & Data Frameworks</div>
+              <div class="skills-tags">
+                <span class="skills-tag">TensorFlow</span>
+                <span class="skills-tag">PyTorch</span>
+                <span class="skills-tag">Scikit-learn</span>
+                <span class="skills-tag">Keras</span>
+                <span class="skills-tag">NumPy</span>
+                <span class="skills-tag">Pandas</span>
+                <span class="skills-tag">Hadoop</span>
+                <span class="skills-tag">PySpark</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="skills-group-title">Platforms & Tools</div>
+              <div class="skills-tags">
+                <span class="skills-tag">AWS</span>
+                <span class="skills-tag">Docker</span>
+                <span class="skills-tag">Kubernetes</span>
+                <span class="skills-tag">Git</span>
+                <span class="skills-tag">Databricks</span>
+                <span class="skills-tag">Neo4j</span>
+                <span class="skills-tag">MySQL</span>
+                <span class="skills-tag">PostgreSQL</span>
+                <span class="skills-tag">Excel</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="skills-group-title">Analytics & Visualization</div>
+              <div class="skills-tags">
+                <span class="skills-tag">Power BI</span>
+                <span class="skills-tag">Tableau</span>
+                <span class="skills-tag">Streamlit</span>
+                <span class="skills-tag">Exploratory Data Analysis</span>
+                <span class="skills-tag">Time-series forecasting</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">Experience</div>
+            <div class="section-title">Where I’ve been</div>
+            <p class="section-subtitle">
+              Hands-on roles in AI engineering and web development, delivering solutions
+              that improve automation, user experience, and data-driven decision making.
+            </p>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-title">AI Engineer Intern · Copani LLC</div>
+              <div class="timeline-meta">Florida, USA · Jan 2025 – Present</div>
+              <ul class="timeline-list">
+                <li>Developing NLP pipelines using Hugging Face Transformers (primarily BERT, limited T5) to automate customer service understanding and reduce human intervention.</li>
+                <li>Designing API-driven workflows that automatically generate email responses tailored to client-specific requirements while maintaining compliance and data security.</li>
+                <li>Engineering a finance-focused LLaMA3 model with LoRA fine-tuning in Ollama to analyze technical, fundamental, and sentiment data for actionable stock insights.</li>
+              </ul>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-title">Web Developer Intern · NSIC</div>
+              <div class="timeline-meta">Chennai, India · Jul 2022 – Aug 2022</div>
+              <ul class="timeline-list">
+                <li>Architected and launched 10+ responsive web pages using HTML and CSS, reducing bounce rates by 20%.</li>
+                <li>Enhanced user experience through improved UI components, driving a 15% increase in user engagement.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">Projects</div>
+            <div class="section-title">Selected work</div>
+            <p class="section-subtitle">
+              A snapshot of projects where I applied data engineering, machine learning,
+              and deployment skills to real-world problems.
+            </p>
+          </div>
+
+          <div class="grid-2">
+            <div class="card">
+              <div class="card-subtitle">Analytics · Forecasting · ETL</div>
+              <div class="card-title">Small Business Index Analysis & Forecasting</div>
+              <div class="card-meta">PySpark · Machine Learning · Streamlit</div>
+              <ul class="card-list">
+                <li>Built an ETL workflow to ingest raw sales data, clean missing values, remove outliers, normalize ranges, and categorize features into star-schema tables, achieving 90% accuracy.</li>
+                <li>Developed supervised forecasting models across NAICS sectors to generate actionable insights.</li>
+                <li>Created a Streamlit analytics app that delivers adjusted forecasts for 25+ subsectors with interactive visualizations and market indicators.</li>
+              </ul>
+              <div class="chip-row">
+                <span class="chip">ETL</span>
+                <span class="chip">Time-series</span>
+                <span class="chip">Business analytics</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-subtitle">MLOps · Deployment</div>
+              <div class="card-title">Airbnb Price Recommendation Model</div>
+              <div class="card-meta">Docker · DagsHub · Streamlit</div>
+              <ul class="card-list">
+                <li>Processed listing data with SQLite3 and optimized ML models for 92% accurate price prediction.</li>
+                <li>Containerized the ML model with Docker and managed model storage and retrieval workflows.</li>
+                <li>Built a Streamlit app for real-time price exploration, supporting better decisions for hosts and travelers.</li>
+              </ul>
+              <div class="chip-row">
+                <span class="chip">MLOps</span>
+                <span class="chip">Docker</span>
+                <span class="chip">Model serving</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-subtitle">Data Analytics</div>
+              <div class="card-title">NYC Taxi Tipping Pattern Analysis</div>
+              <div class="card-meta">Pandas · Statistical Analysis</div>
+              <ul class="card-list">
+                <li>Analyzed 3M+ NYC taxi trips to uncover tipping patterns across passenger, trip, and socioeconomic factors.</li>
+                <li>Identified tipping trends across payment types, fares, durations, surcharges, and borough income levels.</li>
+                <li>Generated insights to support operational planning and service optimization initiatives.</li>
+              </ul>
+              <div class="chip-row">
+                <span class="chip">EDA</span>
+                <span class="chip">Behavioral patterns</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-subtitle">Computer Vision · ML Engineering</div>
+              <div class="card-title">Face Recognition Check-In System</div>
+              <div class="card-meta">OpenCV · Embeddings · Real-time</div>
+              <ul class="card-list">
+                <li>Developed a real-time check-in system using Haarcascade detection and embedding-based identity classification.</li>
+                <li>Improved recognition robustness under varied lighting and filtered unknown faces via tuned thresholds.</li>
+                <li>Automated check-in logging to Excel-based records for streamlined attendance management.</li>
+              </ul>
+              <div class="chip-row">
+                <span class="chip">Computer vision</span>
+                <span class="chip">Real-time systems</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education & Achievements -->
+      <section id="education">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">Education & Achievements</div>
+            <div class="section-title">Academic journey</div>
+          </div>
+
+          <div class="grid-2">
+            <div class="card">
+              <div class="card-subtitle">Graduate</div>
+              <div class="card-title">M.S. in Engineering Science (Data Science)</div>
+              <div class="card-meta">State University of New York at Buffalo · Jan 2024 – May 2025 · CGPA: 3.667/4</div>
+              <ul class="card-list">
+                <li>Coursework: Machine Learning, Deep Learning, Data Structures & Algorithms, Statistics, Distributed Systems, Optimization Mathematics, Data Mining, Embedded Systems.</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <div class="card-subtitle">Undergraduate</div>
+              <div class="card-title">B.E. in Computer Science (AI & ML)</div>
+              <div class="card-meta">Annamalai University, Chidambaram, India · Jul 2019 – May 2023 · CGPA: 8.95/10</div>
+              <ul class="card-list">
+                <li>Built foundational skills in algorithms, AI, and software engineering with a focus on applied ML.</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <div class="card-subtitle">Innovation</div>
+              <div class="card-title">Elysium Security · Startup Boot Camp</div>
+              <div class="card-meta">UB Startup Boot Camp · 1st Place</div>
+              <ul class="card-list">
+                <li>Pitched an AI-driven surveillance concept using YOLO for real-time crime detection and automated threat alerts.</li>
+                <li>Demonstrated strong innovation and market potential, winning 1st place at the UB Startup Boot Camp.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">Contact</div>
+            <div class="section-title">Let’s talk</div>
+            <p class="section-subtitle">
+              I’m open to roles in AI Engineering, Data Science, and ML Engineering — as well as
+              collaborations on impactful analytics and AI products.
+            </p>
+          </div>
+
+          <div class="contact-box">
+            <div>
+              <div class="contact-title">Want to work together or say hi?</div>
+              <p class="contact-text">
+                The best way to reach me is via email or LinkedIn. I’m happy to share more
+                details on my projects, walk through my code, or discuss how I can help your team.
+              </p>
+            </div>
+            <div class="contact-links">
+              <a href="mailto:navaneet.aru@gmail.com">
+                ✉️ navaneet.aru@gmail.com
+                <span>Primary contact</span>
+              </a>
+              <a href="https://github.com/navaneeth1228" target="_blank" rel="noopener">
+                🧑‍💻 GitHub · navaneeth1228
+                <span>Projects & code</span>
+              </a>
+              <!-- Replace with your actual LinkedIn URL -->
+              <a href="https://www.linkedin.com" target="_blank" rel="noopener">
+                🔗 LinkedIn
+                <span>Let’s connect professionally</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      Built with ❤️ using HTML & CSS · Hosted on
+      <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a><br />
+      © <span id="year"></span> Navaneethakannan Arumugam
+    </footer>
   </div>
+
+  <script>
+    // Set current year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

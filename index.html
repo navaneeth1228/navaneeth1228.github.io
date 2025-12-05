@@ -474,6 +474,34 @@
       color: #cbd5f5;
     }
 
+    /* 🔗 Project links buttons */
+    .project-links {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 12px;
+    }
+
+    .project-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.9);
+      color: #e5e7eb;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .project-link-btn:hover {
+      border-color: rgba(129, 140, 248, 0.95);
+      background: radial-gradient(circle at top left, rgba(79, 70, 229, 0.6), rgba(15, 23, 42, 0.95));
+      transform: translateY(-1px);
+    }
+
     /* Skills */
     .skills-grid {
       display: grid;
@@ -864,6 +892,7 @@
           </div>
 
           <div class="grid-2">
+            <!-- Small Business Index Forecasting -->
             <div class="card">
               <div class="card-subtitle">Analytics · Forecasting · ETL</div>
               <div class="card-title">Small Business Index Analysis & Forecasting</div>
@@ -878,8 +907,19 @@
                 <span class="chip">Time-series</span>
                 <span class="chip">Business analytics</span>
               </div>
+              <div class="project-links">
+                <a
+                  class="project-link-btn"
+                  href="https://github.com/navaneeth1228/Sales-Index-Forecasting-For-Business-Growth"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  🔗 GitHub Repo
+                </a>
+              </div>
             </div>
 
+            <!-- Airbnb Price Predictor -->
             <div class="card">
               <div class="card-subtitle">MLOps · Deployment</div>
               <div class="card-title">Airbnb Price Recommendation Model</div>
@@ -894,8 +934,19 @@
                 <span class="chip">Docker</span>
                 <span class="chip">Model serving</span>
               </div>
+              <div class="project-links">
+                <a
+                  class="project-link-btn"
+                  href="https://github.com/navaneeth1228/Airbnb_Price_Predictor"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  🔗 GitHub Repo
+                </a>
+              </div>
             </div>
 
+            <!-- NYC Taxi Tipping Analysis -->
             <div class="card">
               <div class="card-subtitle">Data Analytics</div>
               <div class="card-title">NYC Taxi Tipping Pattern Analysis</div>
@@ -909,8 +960,19 @@
                 <span class="chip">EDA</span>
                 <span class="chip">Behavioral patterns</span>
               </div>
+              <div class="project-links">
+                <a
+                  class="project-link-btn"
+                  href="https://github.com/navaneeth1228/NYC-Taxi-Tipping-Pattern-Analysis"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  🔗 GitHub Repo
+                </a>
+              </div>
             </div>
 
+            <!-- Face Recognition System -->
             <div class="card">
               <div class="card-subtitle">Computer Vision · ML Engineering</div>
               <div class="card-title">Face Recognition Check-In System</div>
@@ -923,6 +985,16 @@
               <div class="chip-row">
                 <span class="chip">Computer vision</span>
                 <span class="chip">Real-time systems</span>
+              </div>
+              <div class="project-links">
+                <a
+                  class="project-link-btn"
+                  href="https://github.com/navaneeth1228/Face-Recognition"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  🔗 GitHub Repo
+                </a>
               </div>
             </div>
           </div>

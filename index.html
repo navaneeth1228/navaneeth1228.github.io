@@ -3,14 +3,47 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Navaneethakannan Arumugam — Data Science · AI Engineering</title>
-  <meta name="description" content="Portfolio of Navaneethakannan (Navaneeth) Arumugam — Data Science professional building end-to-end solutions across industrial automation, real-time analytics, full-stack development, and agentic AI workflows for energy and enterprise applications." />
+  <title>Navaneethakannan Arumugam — Data &amp; AI Engineering</title>
+  <meta name="description" content="Navaneethakannan (Nav) Arumugam — data, AI/ML and software engineer. I build production data platforms, ETL pipelines and LLM/RAG systems for renewable-energy and enterprise applications. Currently Software Developer at Merit Controls." />
+  <meta name="author" content="Navaneethakannan Arumugam" />
+  <link rel="canonical" href="https://navaneeth1228.github.io/" />
+
+  <!-- Social preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Navaneethakannan Arumugam — Data &amp; AI Engineering" />
+  <meta property="og:description" content="15,000+ device registers unified into one source of truth. Commissioning cut from weeks to minutes. Production ETL, RAG and NLP systems." />
+  <meta property="og:url" content="https://navaneeth1228.github.io/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Navaneethakannan Arumugam — Data &amp; AI Engineering" />
+  <meta name="twitter:description" content="15,000+ device registers unified into one source of truth. Commissioning cut from weeks to minutes. Production ETL, RAG and NLP systems." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230E7C66'/%3E%3Cpath d='M6 22 L11 12 L15 19 L20 9 L26 22' fill='none' stroke='%23F2A33C' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Navaneethakannan Arumugam",
+    "alternateName": "Nav Arumugam",
+    "jobTitle": "Software Developer",
+    "url": "https://navaneeth1228.github.io/",
+    "email": "mailto:navaneethakannan2001@gmail.com",
+    "worksFor": { "@type": "Organization", "name": "Merit Controls" },
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "University at Buffalo, SUNY" },
+      { "@type": "CollegeOrUniversity", "name": "Annamalai University" }
+    ],
+    "knowsAbout": ["Data Engineering","ETL","PostgreSQL","Python","FastAPI","PySpark","Retrieval-Augmented Generation","Natural Language Processing","SCADA","Modbus","DNP3","Microsoft Azure"],
+    "sameAs": [
+      "https://github.com/navaneeth1228",
+      "https://www.linkedin.com/in/navaneethakannan-arumugam-99b39a422/"
+    ]
+  }
+  </script>
 
   <style>
     /* ============ Tokens ============ */
@@ -76,6 +109,11 @@
     }
     .mono { font-family: "IBM Plex Mono", ui-monospace, monospace; }
     .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+    .skip {
+      position: absolute; left: -9999px; top: 0;
+      background: var(--accent); color: #fff; padding: 10px 16px; border-radius: 0 0 8px 0; z-index: 50;
+    }
+    .skip:focus { left: 0; }
 
     /* Register-tag section eyebrow */
     .tag-eyebrow {
@@ -91,7 +129,7 @@
       margin-bottom: 14px;
     }
     section { padding: 88px 0; border-top: 1px solid var(--line); }
-    .section-head { max-width: 640px; margin-bottom: 44px; }
+    .section-head { max-width: 660px; margin-bottom: 44px; }
     .section-head h2 { font-size: clamp(26px, 4vw, 34px); font-weight: 800; }
     .section-head p { color: var(--ink-2); margin: 12px 0 0; }
 
@@ -131,7 +169,13 @@
       display: grid; place-items: center; transition: border-color .2s;
     }
     #themeToggle:hover { border-color: var(--line-strong); color: var(--ink); }
-    @media (max-width: 720px) { .nav-links a:not(.nav-cta) { display: none; } }
+    @media (max-width: 780px) { .nav-links a:not(.nav-cta) { display: none; } }
+    @media (max-width: 560px) {
+      .brand { font-size: 13px; gap: 8px; }
+      .brand-mark { width: 22px; height: 22px; border-radius: 5px; }
+      .nav { gap: 10px; }
+      .nav-links a { padding: 6px 6px; }
+    }
 
     /* ============ Hero ============ */
     .hero {
@@ -157,7 +201,7 @@
     }
     .hero h1 .accent { color: var(--accent); }
     .hero-sub {
-      color: var(--ink-2); max-width: 58ch; margin: 20px 0 0;
+      color: var(--ink-2); max-width: 60ch; margin: 20px 0 0;
       font-size: clamp(15.5px, 1.6vw, 17.5px);
     }
     .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
@@ -176,7 +220,7 @@
 
     /* Signature: telemetry strip */
     .telemetry {
-      margin-top: 56px;
+      margin: 56px 0 0;
       background: var(--bg-card);
       border: 1px solid var(--line);
       border-radius: 12px;
@@ -200,6 +244,7 @@
       border: 1px solid var(--line); border-radius: 4px; padding: 3px 8px;
     }
     .reg-tag b { color: var(--accent); font-weight: 500; }
+    .reg-tag i { color: var(--signal); font-style: normal; font-weight: 500; }
 
     /* ============ About ============ */
     .about-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; }
@@ -237,8 +282,12 @@
     .xp-meta .now { color: var(--signal); }
     .xp-item h3 { font-size: 19px; font-weight: 700; }
     .xp-item .org { color: var(--ink-2); font-size: 14.5px; margin: 3px 0 12px; }
-    .xp-item ul { margin: 0; padding-left: 18px; color: var(--ink-2); display: grid; gap: 7px; font-size: 15px; }
+    .xp-item ul { margin: 0; padding-left: 18px; color: var(--ink-2); display: grid; gap: 8px; font-size: 15px; }
     .xp-item li::marker { color: var(--accent); }
+    .xp-item li strong { color: var(--ink); font-weight: 600; }
+    .xp-stack {
+      display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px;
+    }
 
     /* ============ Projects ============ */
     .proj-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
@@ -250,15 +299,26 @@
       transition: transform .15s ease, border-color .15s ease;
     }
     .proj:hover { transform: translateY(-3px); border-color: var(--accent); }
+    .proj.feature { grid-column: 1 / -1; border-color: var(--line-strong); }
+    .proj.feature h3 { font-size: 21px; }
     .proj-kind {
       font-family: "IBM Plex Mono", monospace; font-size: 11.5px;
       color: var(--signal); letter-spacing: .06em;
     }
     .proj h3 { font-size: 18px; font-weight: 700; }
     .proj p { margin: 0; color: var(--ink-2); font-size: 14.5px; flex: 1; }
+    .proj ul {
+      margin: 0; padding-left: 18px; color: var(--ink-2); font-size: 14.5px;
+      display: grid; gap: 6px;
+    }
+    .proj li::marker { color: var(--accent); }
     .proj-stack { display: flex; flex-wrap: wrap; gap: 6px; }
     .proj-link {
       font-weight: 600; font-size: 14px; display: inline-flex; align-items: center; gap: 6px;
+      margin-top: 4px;
+    }
+    .proj-note {
+      font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--ink-2);
       margin-top: 4px;
     }
 
@@ -326,13 +386,15 @@
 </head>
 <body>
 
+  <a class="skip" href="#main">Skip to content</a>
+
   <header>
     <div class="wrap nav">
       <a class="brand" href="#top" aria-label="Home">
         <span class="brand-mark" aria-hidden="true">
           <svg width="16" height="16" viewBox="0 0 32 32"><path d="M6 22 L11 12 L15 19 L20 9 L26 22" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </span>
-        Navaneeth&nbsp;Arumugam
+        Navaneethakannan&nbsp;Arumugam
       </a>
       <nav class="nav-links" aria-label="Primary">
         <a href="#about">About</a>
@@ -349,26 +411,28 @@
     </div>
   </header>
 
-  <main id="top">
+  <main id="main">
+    <div id="top"></div>
 
     <!-- ============ HERO ============ -->
     <section class="hero">
       <div class="wrap">
-        <p class="hero-status"><span class="dot" aria-hidden="true"></span> NAV.STATUS&nbsp;=&nbsp;OPEN_TO_OPPORTUNITIES · US (F-1 OPT)</p>
+        <p class="hero-status"><span class="dot" aria-hidden="true"></span> NAV.STATUS&nbsp;=&nbsp;OPEN_TO_OPPORTUNITIES · AUTHORIZED_TO_WORK_IN_US</p>
         <h1>I turn raw signals into <span class="accent">systems that decide.</span></h1>
         <p class="hero-sub">
-          I'm Navaneeth — a data science professional building end-to-end solutions across
-          industrial automation, real-time analytics, full-stack development, and agentic AI
-          workflows for energy and enterprise applications. Currently a Software Developer at
-          Merit Controls, integrating SCADA for renewable energy assets.
+          I'm Navaneethakannan Arumugam — Nav, for short — a data, AI/ML and software engineer who ships production systems end to end:
+          database architecture, ETL and event-driven pipelines, transformer-based NLP and LLM/RAG
+          applications, and full-stack cloud delivery with CI/CD. At Merit Controls I turned fragmented
+          vendor device data into the single source of truth the product team now validates releases
+          against — and cut SCADA commissioning from weeks of manual engineering to minutes.
         </p>
         <div class="hero-ctas">
           <a class="btn btn-primary" href="#projects">Explore my work</a>
-          <a class="btn btn-ghost" href="https://github.com/navaneeth1228/navaneeth1228.github.io/blob/main/Navaneethakannan%20Arumugam_resume.pdf" target="_blank" rel="noopener">View résumé</a>
+          <a class="btn btn-ghost" href="./Nav_Arumugam_Resume.pdf" target="_blank" rel="noopener">View résumé</a>
         </div>
 
         <!-- Signature element: live telemetry strip -->
-        <figure class="telemetry" aria-label="Decorative animated telemetry chart" style="margin-bottom:0">
+        <figure class="telemetry" aria-label="Decorative animated telemetry chart with career readouts" style="margin-bottom:0">
           <div class="telemetry-bar">
             <span class="live">● LIVE</span>
             <span>TREND&nbsp;/&nbsp;NAV.CAREER.SIGNAL</span>
@@ -385,12 +449,12 @@
             <circle id="signalDot" r="4" fill="var(--signal)" cx="0" cy="110"/>
           </svg>
           <div class="telemetry-tags">
-            <span class="reg-tag"><b>SCADA</b>.RTAC.PIPELINE</span>
-            <span class="reg-tag"><b>DB</b>.POSTGRES.15K_TAGS</span>
-            <span class="reg-tag"><b>ML</b>.NLP.TRANSFORMERS</span>
-            <span class="reg-tag"><b>LLM</b>.LLAMA3.LORA</span>
-            <span class="reg-tag"><b>APP</b>.REACT.FASTAPI</span>
-            <span class="reg-tag"><b>OPS</b>.DOCKER.AZURE</span>
+            <span class="reg-tag"><b>REGISTERS.UNIFIED</b> = <i>15,000+</i></span>
+            <span class="reg-tag"><b>CANONICAL.TAGS</b> = <i>369</i></span>
+            <span class="reg-tag"><b>OEM.VENDORS</b> = <i>15+</i></span>
+            <span class="reg-tag"><b>COMMISSIONING</b> = <i>WEEKS → MINUTES</i></span>
+            <span class="reg-tag"><b>CI.TESTS</b> = <i>100+</i></span>
+            <span class="reg-tag"><b>EMAIL.TRIAGE.ACC</b> = <i>90%</i></span>
           </div>
         </figure>
       </div>
@@ -401,35 +465,44 @@
       <div class="wrap">
         <div class="section-head reveal">
           <span class="tag-eyebrow">NAV.ABOUT</span>
-          <h2>Applied AI and data engineering, end to end</h2>
+          <h2>Applied data and AI engineering, end to end</h2>
         </div>
         <div class="about-grid">
           <div class="reveal">
             <p>
-              I work across the whole stack of a data product: <strong>ingesting and normalizing
-              messy industrial data</strong>, designing relational schemas, building APIs and
-              React frontends on top, and wiring in <strong>agentic AI workflows</strong> that keep
-              pipelines current without human intervention.
+              I work across the whole life of a data product: <strong>ingesting and normalizing messy
+              industrial data</strong>, designing the relational model underneath it, building the APIs
+              and React frontends on top, and wiring in <strong>event-driven automation</strong> that
+              keeps the whole thing current without anyone touching it.
             </p>
             <p>
-              At Merit Controls I aggregate 15,000+ registers from multiple vendor maps into a
-              normalized PostgreSQL model and auto-generate RTAC controller configurations for
-              PPC/SCADA testing. Before that, at Copani LLC, I built NLP pipelines with Hugging
-              Face Transformers and fine-tuned a finance-focused LLaMA3 model with LoRA for
-              automated stock evaluation reports.
+              At Merit Controls I architected the OEM database — a star-schema PostgreSQL model that
+              normalizes <strong>15,000+ Modbus and DNP3 registers from 15+ BESS and PV-inverter
+              manufacturers into 369 canonical tags</strong> through a transaction-safe ETL. It's now
+              the reference the product team validates SCADA, PVPC and MPC releases against. On top of
+              it I built the PVPC Transformer, which auto-generates AcSELerator RTAC client, controller
+              and driver files for 20+ devices, and a fully local RAG pipeline that answers project-spec
+              questions with page citations at zero per-query cost.
             </p>
             <p>
-              I hold an M.S. in Engineering Science (Data Science) from SUNY Buffalo and a B.E.
-              in Computer Science (AI &amp; ML). I care about systems that are tested
-              (pytest + vitest), containerized, and ready for production — not just notebooks.
+              Before that, at Copani LLC, I built an NLP pipeline on Hugging Face Transformers that
+              triages 50+ customer emails a day at 90% accuracy behind a human-in-the-loop review gate,
+              and fine-tuned a finance-focused LLaMA3 model with LoRA adapters served locally through
+              Ollama.
+            </p>
+            <p>
+              I hold an M.S. in Engineering Science (Data Science) from SUNY Buffalo and a B.E. in
+              Computer Science (AI &amp; ML). I care about systems that are tested, containerized and
+              deployable — not notebooks.
             </p>
           </div>
           <div class="fact-card reveal">
             <dl>
               <div><dt>Current role</dt><dd>Software Developer · Merit Controls</dd></div>
-              <div><dt>Focus</dt><dd>SCADA integration · Agentic AI · Full-stack data apps</dd></div>
-              <div><dt>Location</dt><dd>United States · Open to relocate</dd></div>
-              <div><dt>Work authorization</dt><dd>F-1 OPT</dd></div>
+              <div><dt>Focus</dt><dd>Data platforms · ETL &amp; pipelines · LLM/RAG systems · Full-stack delivery</dd></div>
+              <div><dt>Domain edge</dt><dd>Renewable energy — BESS, solar, SCADA, Modbus/DNP3</dd></div>
+              <div><dt>Location</dt><dd>New Jersey, US · Open to relocate</dd></div>
+              <div><dt>Work authorization</dt><dd>Authorized to work in the US</dd></div>
             </dl>
           </div>
         </div>
@@ -448,36 +521,47 @@
           <article class="xp-item current reveal">
             <p class="xp-meta"><span class="now">JAN 2026 → PRESENT</span><span>NJ, USA</span></p>
             <h3>Software Developer</h3>
-            <p class="org">Merit Controls — advanced SCADA integration for renewable energy assets</p>
+            <p class="org">Merit Controls — industrial control systems integration for renewable-energy assets</p>
             <ul>
-              <li>Aggregated 15,000+ registers from multiple vendor maps into a normalized relational PostgreSQL model with tag mapping.</li>
-              <li>Built an end-to-end pipeline auto-generating RTAC controller client and driver files for PPC/SCADA testing.</li>
-              <li>Provisioned Linux VMs with PostgreSQL; Docker-containerized backend/frontend with network remote access.</li>
-              <li>Prototyped a Streamlit POC, then delivered a production React + FastAPI application with full functionality.</li>
-              <li>Implemented unit, integration, and regression suites with pytest and vitest for reliable CI/CD deployment.</li>
-              <li>Engineered agentic automation workflows that auto-trigger pipeline updates when new device data is ingested.</li>
-              <li>Architected the migration strategy for database and product tooling to Azure cloud services.</li>
+              <li><strong>Established the single source of truth for vendor device data</strong>, now used across the product team to validate SCADA, PVPC and MPC releases, by independently architecting the OEM database: a star-schema PostgreSQL model normalizing 15,000+ Modbus/DNP3 registers from 15+ BESS and PV-inverter manufacturers into 369 canonical tags via a transaction-safe, auto-triggering ETL.</li>
+              <li><strong>Cut PPC/SCADA commissioning setup from weeks of manual engineering to minutes</strong> by building the PVPC Transformer on that database — a Python, FastAPI and React tool that auto-generates AcSELerator RTAC client, controller and driver files for 20+ devices. Released v1.0 and v1.x; database-driven v2.0 underway.</li>
+              <li><strong>Reduced requirements investigation and QA/QC review from hours of searching 100-page project documents to page-cited answers</strong> by architecting a fully local RAG pipeline — Tesseract OCR, all-MiniLM-L6-v2 embeddings, a Chroma vector store, hybrid dense/BM25 retrieval and Qwen-1.5B Instruct — running offline at zero per-query cost.</li>
+              <li><strong>Kept OEM datasets current with zero manual intervention</strong> by engineering an event-driven, n8n-orchestrated microservices stack (Docker Compose, Flask API) that re-runs the ETL automatically whenever new device data is ingested.</li>
+              <li><strong>Caught regressions before every release</strong> by building GitHub Actions CI/CD pipelines running 100+ automated unit, integration and regression tests with pytest and vitest.</li>
+              <li><strong>Enabling cloud-native deployment and org-wide access</strong> by architecting and leading the ongoing migration of the OEM database and product tooling from a private Linux VM to Microsoft Azure.</li>
             </ul>
+            <div class="xp-stack">
+              <span class="chip">PostgreSQL</span><span class="chip">Python</span><span class="chip">FastAPI</span>
+              <span class="chip">React</span><span class="chip">Docker</span><span class="chip">n8n</span>
+              <span class="chip">Azure</span><span class="chip">RAG</span><span class="chip">Modbus / DNP3</span>
+            </div>
           </article>
 
           <article class="xp-item reveal">
-            <p class="xp-meta"><span>JAN 2025 → JAN 2026</span><span>Florida, USA</span></p>
+            <p class="xp-meta"><span>JAN 2025 → JAN 2026</span><span>FL, USA</span></p>
             <h3>AI Engineer</h3>
-            <p class="org">Copani LLC — AI-powered agentic workflows for customer service automation</p>
+            <p class="org">Copani LLC — AI-powered agentic workflows for customer-service automation</p>
             <ul>
-              <li>Developed NLP pipelines with Hugging Face Transformers (primarily BERT, limited T5) to automate customer service understanding, boosting model accuracy and reducing human intervention.</li>
-              <li>Designed API-driven workflows automating client-tailored email responses, increasing processing efficiency by 90% while upholding data security and compliance.</li>
-              <li>Engineered a finance-focused LLaMA3 model with LoRA fine-tuning in Ollama, analyzing technical, fundamental, and sentiment data into automated stock evaluation reports.</li>
+              <li><strong>Automated triage of 50+ daily customer emails at 90% accuracy</strong> by building an NLP pipeline on Hugging Face Transformers that encodes inbound messages with BERT and maps them to a curated response library via semantic matching, replacing manual reading and routing.</li>
+              <li><strong>Protected response quality during rollout</strong> by designing the pipeline around a human-in-the-loop verification gate — every model-selected response was reviewed before send, so automation expanded only as measured accuracy justified it.</li>
+              <li><strong>Increased email-processing efficiency 90%</strong> by integrating the pipeline with the Gmail API to classify inbound messages and auto-draft client-specific responses under strong data-security and compliance controls.</li>
+              <li><strong>Advanced the system from retrieval toward generation</strong> by prototyping a T5 encoder-decoder model, so responses could be generated rather than selected from fixed templates — extending coverage to inquiries outside the existing library.</li>
+              <li><strong>Adapted a finance-focused LLaMA3 model to domain analysis on commodity hardware</strong> using PEFT with LoRA adapters over a quantized base served locally through Ollama, synthesizing technical, fundamental and sentiment signals into automated investment reports for internal use.</li>
             </ul>
+            <div class="xp-stack">
+              <span class="chip">Hugging Face</span><span class="chip">BERT</span><span class="chip">T5</span>
+              <span class="chip">LLaMA3</span><span class="chip">PEFT / LoRA</span><span class="chip">Ollama</span>
+              <span class="chip">Gmail API</span>
+            </div>
           </article>
 
           <article class="xp-item reveal">
             <p class="xp-meta"><span>JUL 2022 → AUG 2022</span><span>Chennai, India</span></p>
             <h3>Web Developer Intern</h3>
-            <p class="org">National Small Industries Corporation Limited (NSIC)</p>
+            <p class="org">National Small Industries Corporation (NSIC) — government small-business enterprise</p>
             <ul>
-              <li>Architected and launched 10+ responsive web pages with HTML and CSS, reducing bounce rates by 20%.</li>
-              <li>Improved UI components, driving a 15% increase in user engagement.</li>
+              <li>Architected and launched 10+ responsive web pages in HTML and CSS for a government small-business portal, standardizing reusable UI components across the site.</li>
+              <li>Cut bounce rates 20% and lifted user engagement 15% by refining those components and improving responsive layout behavior across screen sizes.</li>
             </ul>
           </article>
         </div>
@@ -490,15 +574,36 @@
         <div class="section-head reveal">
           <span class="tag-eyebrow">NAV.PRJ</span>
           <h2>Selected projects</h2>
-          <p>Data engineering, machine learning, and deployment applied to real problems. All code is on GitHub.</p>
+          <p>Data engineering, machine learning and deployment applied to real problems — built, tested and shipped.</p>
         </div>
         <div class="proj-grid">
-          <article class="proj reveal">
-            <span class="proj-kind">FORECASTING · ETL · ANALYTICS</span>
-            <h3>Small Business Index — Analysis &amp; Forecasting</h3>
-            <p>ETL workflow ingesting raw sales data — cleaning, outlier removal, normalization — into star-schema tables at 90% accuracy. Supervised forecasting for the Fiserv Small Business Index across NAICS sectors, served through a Streamlit app with adjusted forecasts for 25+ subsectors.</p>
+
+          <article class="proj feature reveal">
+            <span class="proj-kind">PIPELINE ENGINEERING · ORCHESTRATION · SELF-HOSTED INFRA</span>
+            <h3>Automated Job-Application Pipeline</h3>
+            <p>A scheduled 26-node n8n microservice pipeline that eliminates a daily manual workflow end to end: it retrieves live postings, generates tailored PDFs through a Gemini-backed keyword-extraction agent rendered to LaTeX, and delivers them unattended at 7 AM.</p>
+            <ul>
+              <li>Self-hosted the Docker-containerized n8n instance on a Linux VPS rather than local Docker Desktop, removing the dependency on a developer machine being powered on for scheduled triggers to fire.</li>
+              <li>Solved OAuth 2.0 against Google APIs — which reject raw IP addresses as redirect targets — by mapping the VPS to a stable DuckDNS hostname that survives IP changes without re-registering credentials.</li>
+              <li>Prevented duplicate processing and redundant API spend with a two-tier deduplication layer: in-run URL dedup plus a Supabase (PostgreSQL) persistence check issuing lookups concurrently via <code class="mono">Promise.all</code>, backed by a job-history table keyed on posting URL.</li>
+              <li>Handled long-running external jobs with an asynchronous polling loop (submit → status-check → conditional wait-and-retry) against the Apify Actor REST API instead of blocking on fixed sleeps.</li>
+              <li>Hardened against upstream data-quality issues with a defensive parsing layer — multi-key field fallbacks, HTML stripping and entity decoding, recency and content-length filters — rejecting malformed records before downstream processing.</li>
+            </ul>
             <div class="proj-stack">
-              <span class="chip">PySpark</span><span class="chip">Machine Learning</span><span class="chip">Streamlit</span><span class="chip">Star schema</span>
+              <span class="chip">n8n</span><span class="chip">Docker</span><span class="chip">Linux VPS</span>
+              <span class="chip">Supabase</span><span class="chip">REST APIs</span><span class="chip">OAuth 2.0</span>
+              <span class="chip">Google Gemini</span>
+            </div>
+            <p class="proj-note">Private repository — walkthrough available on request.</p>
+          </article>
+
+          <article class="proj reveal">
+            <span class="proj-kind">DATA ENGINEERING · FORECASTING</span>
+            <h3>Small Business Index — Analysis &amp; Forecasting</h3>
+            <p>A PySpark ETL pipeline turning 5 years of raw sales data into forecast-ready datasets — imputing missing values, removing outliers, normalizing ranges and encoding categorical features. Six ML models benchmarked (XGBoost won) to model the Fiserv Small Business Index across 20 NAICS sectors and 50 U.S. states, explaining ~90% of variance (R² ≈ 0.90), served through a Streamlit app for sector and state analysis.</p>
+            <div class="proj-stack">
+              <span class="chip">PySpark</span><span class="chip">Apache Spark</span><span class="chip">ETL</span>
+              <span class="chip">XGBoost</span><span class="chip">Streamlit</span>
             </div>
             <a class="proj-link" href="https://github.com/navaneeth1228/Sales-Index-Forecasting-For-Business-Growth" target="_blank" rel="noopener">View on GitHub →</a>
           </article>
@@ -506,7 +611,7 @@
           <article class="proj reveal">
             <span class="proj-kind">MLOPS · DEPLOYMENT</span>
             <h3>Airbnb Price Recommendation Model</h3>
-            <p>Processed listing data with SQLite3 and optimized ML models to predict Airbnb prices at 92% accuracy. Containerized with Docker, versioned with DagsHub, and exposed through an interactive Streamlit app for real-time price exploration.</p>
+            <p>Predicts Airbnb listing prices at R² ≈ 0.92 by processing raw data with SQLite3, engineering features from location, property type and amenity attributes, and hyperparameter-tuning regression models. Shipped as a Dockerized service with managed model storage, experiment tracking and versioned artifacts through DagsHub, exposed via Streamlit for real-time price exploration and neighborhood comparison.</p>
             <div class="proj-stack">
               <span class="chip">Docker</span><span class="chip">DagsHub</span><span class="chip">SQLite3</span><span class="chip">Streamlit</span>
             </div>
@@ -516,7 +621,7 @@
           <article class="proj reveal">
             <span class="proj-kind">DATA ANALYSIS · VISUALIZATION</span>
             <h3>NYC Taxi Tipping Pattern Analysis</h3>
-            <p>Exploratory analysis of New York City taxi trip records to surface tipping behavior patterns across time, geography, and trip characteristics — turning a large public dataset into clear, decision-ready insights.</p>
+            <p>Analyzed 3 million NYC taxi trip records in Pandas across passenger, trip and socioeconomic dimensions to uncover what actually drives tipping — surfacing trends across payment type, fare, trip duration, surcharges and borough income levels to support operational planning and service optimization.</p>
             <div class="proj-stack">
               <span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">EDA</span><span class="chip">Visualization</span>
             </div>
@@ -524,14 +629,25 @@
           </article>
 
           <article class="proj reveal">
-            <span class="proj-kind">COMPUTER VISION</span>
-            <h3>Face Recognition</h3>
-            <p>Applied computer vision pipeline for detecting and recognizing faces in images, exploring feature extraction and model-based identification with OpenCV and deep learning tooling.</p>
+            <span class="proj-kind">DATA MODELING · SQL</span>
+            <h3>Library Management System</h3>
+            <p>A Third Normal Form (3NF) relational schema for a transactional library system — modeling books, members, loans and reservations with ACID-compliant transactions and referential-integrity constraints, plus SQL queries and an interface covering the full borrowing lifecycle: search, checkout, return and availability.</p>
             <div class="proj-stack">
-              <span class="chip">OpenCV</span><span class="chip">Deep Learning</span><span class="chip">Python</span>
+              <span class="chip">SQL</span><span class="chip">Normalization</span><span class="chip">Database Design</span><span class="chip">Full-Stack</span>
+            </div>
+            <a class="proj-link" href="https://github.com/navaneeth1228/Library_Management_DMQL" target="_blank" rel="noopener">View on GitHub →</a>
+          </article>
+
+          <article class="proj reveal">
+            <span class="proj-kind">COMPUTER VISION</span>
+            <h3>Face Recognition Check-In System</h3>
+            <p>A real-time identity check-in system combining Haar-cascade face detection with embedding-based classification in OpenCV, recognizing enrolled individuals from a live camera feed. Tuned embedding-distance tolerance thresholds to stay reliable under varied lighting — rejecting unknown faces rather than misclassifying them — and logged verified check-ins to Excel-based attendance records.</p>
+            <div class="proj-stack">
+              <span class="chip">OpenCV</span><span class="chip">Python</span><span class="chip">ML Engineering</span>
             </div>
             <a class="proj-link" href="https://github.com/navaneeth1228/Face-Recognition" target="_blank" rel="noopener">View on GitHub →</a>
           </article>
+
         </div>
       </div>
     </section>
@@ -542,48 +658,72 @@
         <div class="section-head reveal">
           <span class="tag-eyebrow">NAV.SKL</span>
           <h2>Tech stack &amp; tools</h2>
-          <p>From data pipelines and modeling to deployment and industrial protocols.</p>
+          <p>From data modeling and pipelines to model training, deployment and industrial protocols.</p>
         </div>
         <div class="skill-groups">
           <div class="skill-group reveal">
             <h3>Languages</h3>
             <div class="chips">
-              <span class="chip">Python</span><span class="chip">SQL</span><span class="chip">R</span>
-              <span class="chip">C/C++</span><span class="chip">PySpark</span><span class="chip">Matlab</span><span class="chip">Haskell</span>
+              <span class="chip">Python</span><span class="chip">SQL</span><span class="chip">PySpark</span>
+              <span class="chip">JavaScript</span><span class="chip">R</span><span class="chip">C/C++</span>
+              <span class="chip">MATLAB</span><span class="chip">Haskell</span>
             </div>
           </div>
           <div class="skill-group reveal">
-            <h3>ML &amp; AI Frameworks</h3>
+            <h3>Data Engineering</h3>
             <div class="chips">
-              <span class="chip">PyTorch</span><span class="chip">TensorFlow</span><span class="chip">Keras</span>
-              <span class="chip">Hugging Face</span><span class="chip">LangGraph</span><span class="chip">Ollama</span><span class="chip">OpenCV</span>
+              <span class="chip">ETL / ELT</span><span class="chip">Star-schema modeling</span><span class="chip">3NF normalization</span>
+              <span class="chip">Event-driven pipelines</span><span class="chip">Cron scheduling</span><span class="chip">DAG orchestration (n8n)</span>
+              <span class="chip">Apache Airflow</span><span class="chip">Apache Spark</span><span class="chip">Hadoop</span>
+              <span class="chip">Databricks</span><span class="chip">Pandas</span><span class="chip">Data validation</span>
             </div>
           </div>
           <div class="skill-group reveal">
-            <h3>Full-stack &amp; Testing</h3>
+            <h3>Databases &amp; Storage</h3>
             <div class="chips">
-              <span class="chip">React</span><span class="chip">FastAPI</span><span class="chip">Streamlit</span>
-              <span class="chip">pytest</span><span class="chip">vitest</span><span class="chip">n8n</span>
+              <span class="chip">PostgreSQL</span><span class="chip">MySQL</span><span class="chip">SQLite3</span>
+              <span class="chip">Snowflake</span><span class="chip">Supabase</span><span class="chip">Neo4j</span>
+              <span class="chip">Chroma</span>
             </div>
           </div>
           <div class="skill-group reveal">
-            <h3>Data &amp; Cloud Platforms</h3>
+            <h3>ML, NLP &amp; LLMs</h3>
             <div class="chips">
-              <span class="chip">PostgreSQL</span><span class="chip">MySQL</span><span class="chip">Neo4j</span>
-              <span class="chip">Docker</span><span class="chip">Kubernetes</span><span class="chip">Azure</span>
-              <span class="chip">AWS</span><span class="chip">Databricks</span><span class="chip">Hadoop / Spark</span>
+              <span class="chip">Scikit-learn</span><span class="chip">XGBoost</span><span class="chip">PyTorch</span>
+              <span class="chip">TensorFlow</span><span class="chip">Keras</span><span class="chip">Hugging Face Transformers</span>
+              <span class="chip">BERT</span>
+              <span class="chip">T5</span><span class="chip">LLaMA3</span><span class="chip">PEFT / LoRA</span>
+              <span class="chip">RAG</span><span class="chip">LangChain</span><span class="chip">LangGraph</span>
+              <span class="chip">Ollama</span><span class="chip">OpenCV</span>
+            </div>
+          </div>
+          <div class="skill-group reveal">
+            <h3>Backend &amp; Frontend</h3>
+            <div class="chips">
+              <span class="chip">FastAPI</span><span class="chip">Flask</span><span class="chip">React</span>
+              <span class="chip">Streamlit</span><span class="chip">REST APIs</span><span class="chip">OAuth 2.0</span>
+            </div>
+          </div>
+          <div class="skill-group reveal">
+            <h3>Cloud, DevOps &amp; Testing</h3>
+            <div class="chips">
+              <span class="chip">Microsoft Azure</span><span class="chip">AWS</span><span class="chip">Docker</span>
+              <span class="chip">Docker Compose</span><span class="chip">Linux</span><span class="chip">VPS self-hosting</span>
+              <span class="chip">Git</span><span class="chip">GitHub Actions</span><span class="chip">CI/CD</span>
+              <span class="chip">pytest</span><span class="chip">vitest</span>
             </div>
           </div>
           <div class="skill-group reveal">
             <h3>Industrial &amp; SCADA</h3>
             <div class="chips">
-              <span class="chip">AcSELerator RTAC</span><span class="chip">Modbus</span><span class="chip">DNP3</span><span class="chip">CODESYS</span><span class="chip">Linux</span>
+              <span class="chip">AcSELerator RTAC</span><span class="chip">CODESYS</span><span class="chip">Modbus</span>
+              <span class="chip">DNP3</span><span class="chip">PPC / SCADA commissioning</span><span class="chip">BESS &amp; PV inverters</span>
             </div>
           </div>
           <div class="skill-group reveal">
             <h3>Analytics &amp; Collaboration</h3>
             <div class="chips">
-              <span class="chip">Power BI</span><span class="chip">Tableau</span><span class="chip">Git</span>
+              <span class="chip">Power BI</span><span class="chip">Tableau</span><span class="chip">DagsHub</span>
               <span class="chip">Jira</span><span class="chip">Confluence</span>
             </div>
           </div>
@@ -614,7 +754,7 @@
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--signal)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.5 13 17 22l-5-3-5 3 1.5-9"/></svg>
           <div>
             <b>1st place — Startup Boot Camp, Elysium Security (Buffalo, NY)</b>
-            <span>Pitched a YOLO-based real-time crime detection system; demonstrated strong market potential and secured first place.</span>
+            <span>Pitched a YOLO-based real-time crime-detection system; judged on technical execution and market potential.</span>
           </div>
         </div>
       </div>
@@ -626,12 +766,13 @@
         <div class="section-head reveal" style="margin-bottom:0">
           <span class="tag-eyebrow">NAV.CONNECT</span>
           <h2>Let's build something that decides for itself</h2>
-          <p>I'm open to roles in data science, AI engineering, and full-stack data products. The fastest way to reach me is email.</p>
+          <p>I'm open to roles in data engineering, AI/ML engineering and full-stack data products. Email is the fastest way to reach me.</p>
         </div>
         <div class="contact-row reveal">
           <a class="btn btn-primary" href="mailto:navaneethakannan2001@gmail.com">Email me</a>
-          <a class="btn btn-ghost" href="https://www.linkedin.com/in/nka2001/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/navaneethakannan-arumugam-99b39a422/" target="_blank" rel="noopener">LinkedIn</a>
           <a class="btn btn-ghost" href="https://github.com/navaneeth1228" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn btn-ghost" href="./Nav_Arumugam_Resume.pdf" target="_blank" rel="noopener">Résumé (PDF)</a>
         </div>
       </div>
     </section>
@@ -688,7 +829,7 @@
       var path = document.getElementById('signalPath');
       var dot = document.getElementById('signalDot');
       var pts = [];
-      var x = 0, idx = 0;
+      var x = 0;
       var stepX = 10;
 
       function yAt(px) {

@@ -4,24 +4,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Navaneethakannan Arumugam — Data &amp; AI Engineering</title>
-  <meta name="description" content="Navaneethakannan (Nav) Arumugam — data, AI/ML and software engineer. I build production data platforms, ETL pipelines and LLM/RAG systems for renewable-energy and enterprise applications. Currently Software Developer at Merit Controls." />
+  <meta name="description" content="Navaneethakannan (Nav) Arumugam — Data and AI engineer. I build data pipelines and cloud data platforms on Snowflake, Airflow and Google Cloud, keep them trustworthy with data observability, ship evaluated, traced LLM/RAG agents, and build full-stack tools in FastAPI and React. Analyst (Data and AI Engineering) at Blackbuck Insights (BBI)." />
   <meta name="author" content="Navaneethakannan Arumugam" />
   <link rel="canonical" href="https://navaneeth1228.github.io/" />
 
   <!-- Social preview -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Navaneethakannan Arumugam — Data &amp; AI Engineering" />
-  <meta property="og:description" content="15,000+ device registers unified into one source of truth. Commissioning cut from weeks to minutes. Production ETL, RAG and NLP systems." />
+  <meta property="og:description" content="Data pipelines and medallion data platforms on Snowflake and Airflow, 88 data-observability monitors, and RAG agents with 100% retrieval hit rate. Data + AI engineering, end to end." />
   <meta property="og:url" content="https://navaneeth1228.github.io/" />
+  <meta property="og:image" content="https://navaneeth1228.github.io/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Navaneethakannan Arumugam, Data and AI Engineer: data pipelines, data quality and monitoring, Gen AI agents and RAG, full stack" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://navaneeth1228.github.io/og-image.png" />
   <meta name="twitter:title" content="Navaneethakannan Arumugam — Data &amp; AI Engineering" />
-  <meta name="twitter:description" content="15,000+ device registers unified into one source of truth. Commissioning cut from weeks to minutes. Production ETL, RAG and NLP systems." />
+  <meta name="twitter:description" content="Data pipelines and medallion data platforms on Snowflake and Airflow, 88 data-observability monitors, and RAG agents with 100% retrieval hit rate. Data + AI engineering, end to end." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230E7C66'/%3E%3Cpath d='M6 22 L11 12 L15 19 L20 9 L26 22' fill='none' stroke='%23F2A33C' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230E7C66'/%3E%3Ctext x='16' y='22.5' text-anchor='middle' font-family='Arial,Helvetica,sans-serif' font-weight='700' font-size='18' fill='%23fff'%3EN%3C/text%3E%3C/svg%3E" />
 
   <script type="application/ld+json">
   {
@@ -29,15 +34,15 @@
     "@type": "Person",
     "name": "Navaneethakannan Arumugam",
     "alternateName": "Nav Arumugam",
-    "jobTitle": "Software Developer",
+    "jobTitle": "Analyst (Data and AI Engineering)",
     "url": "https://navaneeth1228.github.io/",
-    "email": "mailto:navaneethakannan2001@gmail.com",
-    "worksFor": { "@type": "Organization", "name": "Merit Controls" },
+    "email": "mailto:navaneet.aru@gmail.com",
+    "worksFor": { "@type": "Organization", "name": "Blackbuck Insights (BBI)" },
     "alumniOf": [
       { "@type": "CollegeOrUniversity", "name": "University at Buffalo, SUNY" },
       { "@type": "CollegeOrUniversity", "name": "Annamalai University" }
     ],
-    "knowsAbout": ["Data Engineering","ETL","PostgreSQL","Python","FastAPI","PySpark","Retrieval-Augmented Generation","Natural Language Processing","SCADA","Modbus","DNP3","Microsoft Azure"],
+    "knowsAbout": ["Data Engineering","Apache Airflow","Snowflake","dbt","Databricks","Google Cloud Platform","Data Observability","Monte Carlo","Retrieval-Augmented Generation","Model Context Protocol","LLM Evaluation","Python","SQL","PostgreSQL","PySpark"],
     "sameAs": [
       "https://github.com/navaneeth1228",
       "https://www.linkedin.com/in/navaneethakannan-arumugam-99b39a422/"
@@ -370,6 +375,77 @@
     .foot-row { display: flex; flex-wrap: wrap; gap: 10px 24px; justify-content: space-between; align-items: center; }
     .foot-row .mono { font-size: 12px; }
 
+
+    /* ============ v2: impact strip ============ */
+    .impact { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:44px; }
+    @media (max-width: 820px) { .impact { grid-template-columns:repeat(2,1fr); } }
+    .stat { background:var(--bg-card); border:1px solid var(--line); border-radius:12px; padding:18px 18px 16px; box-shadow:var(--shadow); }
+    .stat .num { font-family:"Archivo",sans-serif; font-weight:800; font-size:clamp(28px,4vw,40px); line-height:1.05; color:var(--accent); letter-spacing:-.01em; }
+    .stat .num small { font-size:.55em; font-weight:700; color:var(--ink-2); }
+    .stat .lbl { margin-top:6px; font-size:14px; color:var(--ink); font-weight:600; }
+    .stat .src { margin-top:2px; font-family:"IBM Plex Mono",monospace; font-size:11px; color:var(--ink-2); letter-spacing:.04em; }
+    .telemetry { margin-top:20px; }
+
+    /* ============ v2: flow diagrams ============ */
+    .flow-wrap { background:var(--bg-inset); border:1px solid var(--line); border-radius:10px; padding:16px; }
+    .flow-title { font-family:"IBM Plex Mono",monospace; font-size:11px; letter-spacing:.08em; color:var(--ink-2); margin:0 0 12px; text-transform:uppercase; }
+    .flow { display:flex; align-items:stretch; gap:0; }
+    .node { flex:1 1 0; min-width:0; background:var(--bg-card); border:1px solid var(--line-strong); border-radius:8px; padding:10px 10px 9px; }
+    .node b { display:block; font-size:13.5px; color:var(--ink); line-height:1.25; }
+    .node span { display:block; margin-top:3px; font-family:"IBM Plex Mono",monospace; font-size:10.5px; color:var(--ink-2); line-height:1.35; }
+    .node.store { border-color:var(--accent); }
+    .node.store b { color:var(--accent); }
+    .arrow { flex:0 0 22px; display:flex; align-items:center; justify-content:center; color:var(--signal); font-weight:700; }
+    .arrow::before { content:"→"; }
+    .flow-band { margin-top:10px; border:1px dashed var(--signal); background:var(--signal-soft); border-radius:8px; padding:8px 12px; font-size:13px; color:var(--ink); }
+    .flow-band b { color:var(--signal); font-family:"IBM Plex Mono",monospace; font-size:11px; letter-spacing:.06em; margin-right:6px; }
+    @media (max-width: 760px) {
+      .flow { flex-direction:column; }
+      .arrow { flex-basis:20px; }
+      .arrow::before { content:"↓"; }
+    }
+
+    /* ============ v2: case study ============ */
+    .case { grid-column:1/-1; border-color:var(--accent) !important; }
+    .case .case-lede { font-size:15.5px; color:var(--ink); }
+    .case-meta { display:flex; flex-wrap:wrap; gap:8px; }
+    .case details { border-top:1px solid var(--line); padding-top:12px; }
+    .case summary { cursor:pointer; font-weight:600; color:var(--accent); list-style:none; display:inline-flex; align-items:center; gap:8px; }
+    .case summary::-webkit-details-marker { display:none; }
+    .case summary::before { content:"+"; font-family:"IBM Plex Mono",monospace; width:18px; height:18px; border:1px solid var(--accent); border-radius:4px; display:inline-flex; align-items:center; justify-content:center; font-size:13px; }
+    .case details[open] summary::before { content:"−"; }
+    .case-grid { display:grid; grid-template-columns:1fr 1fr; gap:18px 28px; margin-top:16px; }
+    @media (max-width: 760px) { .case-grid { grid-template-columns:1fr; } }
+    .case-grid h4 { font-family:"IBM Plex Mono",monospace; font-size:11.5px; letter-spacing:.08em; color:var(--signal); font-weight:500; margin:0 0 6px; text-transform:uppercase; }
+    .case-grid p, .case-grid ul { margin:0; color:var(--ink-2); font-size:14.5px; }
+    .case-grid ul { padding-left:18px; display:grid; gap:5px; }
+    .case-grid li::marker { color:var(--accent); }
+    .case-grid li strong { color:var(--ink); }
+
+    /* ============ v2: filters ============ */
+    .filters { display:flex; flex-wrap:wrap; gap:8px; margin:-8px 0 22px; }
+    .filter { font:inherit; font-size:14px; font-weight:600; color:var(--ink-2); background:var(--bg-card); border:1px solid var(--line-strong); border-radius:999px; padding:6px 14px; cursor:pointer; }
+    .filter:hover { border-color:var(--accent); color:var(--ink); }
+    .filter[aria-pressed="true"] { background:var(--accent); border-color:var(--accent); color:#fff; }
+    .filter .n { font-family:"IBM Plex Mono",monospace; font-size:11.5px; opacity:.75; margin-left:4px; }
+    .proj.is-hidden { display:none; }
+
+    /* ============ v2: show more ============ */
+    .xp-item ul.collapsed > li:nth-child(n+4) { display:none; }
+    .more-btn { margin-top:10px; font:inherit; font-size:13.5px; font-weight:600; color:var(--accent); background:none; border:none; padding:0; cursor:pointer; }
+    .more-btn:hover { text-decoration:underline; }
+
+    /* ============ v2: sticky résumé (mobile) ============ */
+    .resume-fab { display:none; }
+    @media (max-width: 760px) {
+      .resume-fab { display:inline-flex; position:fixed; right:16px; bottom:16px; z-index:60; align-items:center; gap:8px;
+        background:var(--accent); color:#fff; font-weight:600; font-size:14.5px; padding:12px 18px; border-radius:999px;
+        box-shadow:0 6px 20px rgba(0,0,0,.22); transform:translateY(90px); transition:transform .25s ease; }
+      .resume-fab.show { transform:none; }
+      .resume-fab:hover { text-decoration:none; }
+      footer { padding-bottom:90px; }
+    }
+
     /* Reveal on scroll */
     .reveal { opacity: 0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease; }
     .reveal.in { opacity: 1; transform: none; }
@@ -391,9 +467,7 @@
   <header>
     <div class="wrap nav">
       <a class="brand" href="#top" aria-label="Home">
-        <span class="brand-mark" aria-hidden="true">
-          <svg width="16" height="16" viewBox="0 0 32 32"><path d="M6 22 L11 12 L15 19 L20 9 L26 22" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </span>
+        
         Navaneethakannan&nbsp;Arumugam
       </a>
       <nav class="nav-links" aria-label="Primary">
@@ -418,24 +492,28 @@
     <section class="hero">
       <div class="wrap">
         <p class="hero-status"><span class="dot" aria-hidden="true"></span> NAV.STATUS&nbsp;=&nbsp;OPEN_TO_OPPORTUNITIES · AUTHORIZED_TO_WORK_IN_US</p>
-        <h1>I turn raw signals into <span class="accent">systems that decide.</span></h1>
+        <h1>I build Data pipelines and AI systems <span class="accent">you can trust.</span></h1>
         <p class="hero-sub">
-          I'm Navaneethakannan Arumugam — Nav, for short — a data, AI/ML and software engineer who ships production systems end to end:
-          database architecture, ETL and event-driven pipelines, transformer-based NLP and LLM/RAG
-          applications, and full-stack cloud delivery with CI/CD. At Merit Controls I turned fragmented
-          vendor device data into the single source of truth the product team now validates releases
-          against — and cut SCADA commissioning from weeks of manual engineering to minutes.
+          Data and AI engineer at Blackbuck Insights. I build data pipelines on Snowflake, Airflow and Google Cloud,
+          keep them observable, and ship evaluated RAG agents and full-stack tools on top.
         </p>
         <div class="hero-ctas">
           <a class="btn btn-primary" href="#projects">Explore my work</a>
           <a class="btn btn-ghost" href="./Nav_Arumugam_Resume.pdf" target="_blank" rel="noopener">View résumé</a>
         </div>
 
+        <div class="impact" aria-label="Impact highlights">
+          <div class="stat"><div class="num">100<small>%</small></div><div class="lbl">of 68,166 keys reconciled</div><div class="src">BBI · SNOWFLAKE SILVER LAYER</div></div>
+          <div class="stat"><div class="num">88</div><div class="lbl">data observability monitors</div><div class="src">BBI · MONTE CARLO</div></div>
+          <div class="stat"><div class="num">20K<small>+</small></div><div class="lbl">device registers unified</div><div class="src">MERIT · POSTGRESQL OEM DB</div></div>
+          <div class="stat"><div class="num">Weeks<small>→</small>min</div><div class="lbl">commissioning setup time</div><div class="src">MERIT · PVPC TRANSFORMER</div></div>
+        </div>
+
         <!-- Signature element: live telemetry strip -->
         <figure class="telemetry" aria-label="Decorative animated telemetry chart with career readouts" style="margin-bottom:0">
           <div class="telemetry-bar">
             <span class="live">● LIVE</span>
-            <span>TREND&nbsp;/&nbsp;NAV.CAREER.SIGNAL</span>
+            <span>TREND&nbsp;/&nbsp;NAV.DATA_AI.SIGNAL</span>
             <span id="clock" style="margin-left:auto">--:--:--</span>
           </div>
           <svg viewBox="0 0 1000 150" preserveAspectRatio="none" aria-hidden="true">
@@ -449,12 +527,10 @@
             <circle id="signalDot" r="4" fill="var(--signal)" cx="0" cy="110"/>
           </svg>
           <div class="telemetry-tags">
-            <span class="reg-tag"><b>REGISTERS.UNIFIED</b> = <i>15,000+</i></span>
-            <span class="reg-tag"><b>CANONICAL.TAGS</b> = <i>369</i></span>
-            <span class="reg-tag"><b>OEM.VENDORS</b> = <i>15+</i></span>
-            <span class="reg-tag"><b>COMMISSIONING</b> = <i>WEEKS → MINUTES</i></span>
+            <span class="reg-tag"><b>RAG.HIT_RATE@4</b> = <i>100%</i></span>
+            <span class="reg-tag"><b>CANONICAL.TAGS</b> = <i>1,500+</i></span>
+            <span class="reg-tag"><b>AUDITED.LOADS</b> = <i>144</i></span>
             <span class="reg-tag"><b>CI.TESTS</b> = <i>100+</i></span>
-            <span class="reg-tag"><b>EMAIL.TRIAGE.ACC</b> = <i>90%</i></span>
           </div>
         </figure>
       </div>
@@ -465,43 +541,42 @@
       <div class="wrap">
         <div class="section-head reveal">
           <span class="tag-eyebrow">NAV.ABOUT</span>
-          <h2>Applied data and AI engineering, end to end</h2>
+          <h2>Data pipelines, platforms and AI agents, built to be trusted</h2>
         </div>
         <div class="about-grid">
           <div class="reveal">
             <p>
-              I work across the whole life of a data product: <strong>ingesting and normalizing messy
-              industrial data</strong>, designing the relational model underneath it, building the APIs
-              and React frontends on top, and wiring in <strong>event-driven automation</strong> that
-              keeps the whole thing current without anyone touching it.
+              I work across the whole life of a data product: <strong>designing the data contract and the layered
+              model underneath it</strong>, <strong>building and orchestrating the batch and event-driven data pipelines</strong> that feed it, <strong>watching it with data
+              observability</strong> so failures surface before they reach a dashboard, and building the AI on top:
+              agents that cite their sources, refuse what they don't know, and leave a trace of every step.
             </p>
             <p>
-              At Merit Controls I architected the OEM database — a star-schema PostgreSQL model that
-              normalizes <strong>15,000+ Modbus and DNP3 registers from 15+ BESS and PV-inverter
-              manufacturers into 369 canonical tags</strong> through a transaction-safe ETL. It's now
-              the reference the product team validates SCADA, PVPC and MPC releases against. On top of
-              it I built the PVPC Transformer, which auto-generates AcSELerator RTAC client, controller
-              and driver files for 20+ devices, and a fully local RAG pipeline that answers project-spec
-              questions with page citations at zero per-query cost.
+              At Blackbuck Insights I built a bronze/silver medallion e-commerce data platform on Google Cloud and
+              Snowflake from scratch: <strong>two Airflow DAGs with 18 automated checks and per-table audit logging,
+              a curated layer of 11 Snowflake Dynamic Tables reconciling 100% of 68,166 source keys, and 88 Monte Carlo
+              monitors</strong> covering freshness, volume, schema and field quality. Alongside it I built a RAG agent with
+              a 100% retrieval hit rate on its evaluation set, traced end to end with OpenTelemetry, and connected AI
+              clients to Monte Carlo and the agent through the Model Context Protocol (MCP).
             </p>
             <p>
-              Before that, at Copani LLC, I built an NLP pipeline on Hugging Face Transformers that
-              triages 50+ customer emails a day at 90% accuracy behind a human-in-the-loop review gate,
-              and fine-tuned a finance-focused LLaMA3 model with LoRA adapters served locally through
-              Ollama.
+              Before that, at Merit Controls, I architected the OEM database, a star-schema PostgreSQL model normalizing
+              <strong>20,000+ Modbus and DNP3 registers from 15+ manufacturers into 1,500+ canonical tags</strong>, kept current by an auto-triggering, event-driven ETL pipeline, and
+              built the PVPC Transformer on top of it, a full-stack Python, FastAPI and React tool that cut commissioning setup
+              from weeks to minutes. At Copani LLC I built a BERT-based NLP pipeline that triages
+              50+ customer emails a day behind a human-in-the-loop review gate.
             </p>
             <p>
               I hold an M.S. in Engineering Science (Data Science) from SUNY Buffalo and a B.E. in
-              Computer Science (AI &amp; ML). I care about systems that are tested, containerized and
-              deployable — not notebooks.
+              Computer Science (AI &amp; ML). I care about systems that are tested, monitored and auditable, not notebooks.
             </p>
           </div>
           <div class="fact-card reveal">
             <dl>
-              <div><dt>Current role</dt><dd>Software Developer · Merit Controls</dd></div>
-              <div><dt>Focus</dt><dd>Data platforms · ETL &amp; pipelines · LLM/RAG systems · Full-stack delivery</dd></div>
-              <div><dt>Domain edge</dt><dd>Renewable energy — BESS, solar, SCADA, Modbus/DNP3</dd></div>
-              <div><dt>Location</dt><dd>New Jersey, US · Open to relocate</dd></div>
+              <div><dt>Current role</dt><dd>Analyst (Data and AI Engineering) · Blackbuck Insights</dd></div>
+              <div><dt>Focus</dt><dd>Data pipelines · Data platforms · Data observability · LLM/RAG agents · Full-stack (FastAPI, React)</dd></div>
+              <div><dt>Stack</dt><dd>Snowflake · Airflow · Databricks · GCP · Python · SQL</dd></div>
+              <div><dt>Location</dt><dd>United States · Open to relocate</dd></div>
               <div><dt>Work authorization</dt><dd>Authorized to work in the US</dd></div>
             </dl>
           </div>
@@ -515,20 +590,39 @@
         <div class="section-head reveal">
           <span class="tag-eyebrow">NAV.EXP.LOG</span>
           <h2>Experience</h2>
-          <p>A trend log of where I've been — most recent reading first.</p>
+          <p>A trend log of where I've been, most recent reading first.</p>
         </div>
         <div class="xp">
           <article class="xp-item current reveal">
-            <p class="xp-meta"><span class="now">JAN 2026 → PRESENT</span><span>NJ, USA</span></p>
-            <h3>Software Developer</h3>
-            <p class="org">Merit Controls — industrial control systems integration for renewable-energy assets</p>
+            <p class="xp-meta"><span class="now">SEP 2026 → PRESENT</span><span>IL, USA</span></p>
+            <h3>Analyst (Data and AI Engineering)</h3>
+            <p class="org">Blackbuck Insights (BBI) · Data and AI engineering for client delivery</p>
             <ul>
-              <li><strong>Established the single source of truth for vendor device data</strong>, now used across the product team to validate SCADA, PVPC and MPC releases, by independently architecting the OEM database: a star-schema PostgreSQL model normalizing 15,000+ Modbus/DNP3 registers from 15+ BESS and PV-inverter manufacturers into 369 canonical tags via a transaction-safe, auto-triggering ETL.</li>
-              <li><strong>Cut PPC/SCADA commissioning setup from weeks of manual engineering to minutes</strong> by building the PVPC Transformer on that database — a Python, FastAPI and React tool that auto-generates AcSELerator RTAC client, controller and driver files for 20+ devices. Released v1.0 and v1.x; database-driven v2.0 underway.</li>
-              <li><strong>Reduced requirements investigation and QA/QC review from hours of searching 100-page project documents to page-cited answers</strong> by architecting a fully local RAG pipeline — Tesseract OCR, all-MiniLM-L6-v2 embeddings, a Chroma vector store, hybrid dense/BM25 retrieval and Qwen-1.5B Instruct — running offline at zero per-query cost.</li>
+              <li><strong>Built a bronze/silver medallion e-commerce data platform from scratch</strong> on Google Cloud (Cloud Storage, Cloud Composer) and Snowflake, covering 10 source entities and 23 tables and views, by designing the data contract, ingestion flow and bronze-to-silver layers.</li>
+              <li><strong>Automated daily ingestion with full load traceability</strong> through two Apache Airflow DAGs: one generates synthetic batches into Cloud Storage, the other validates each batch with 18 automated checks and loads Snowflake with per-table audit logging (144 audited loads).</li>
+              <li><strong>Delivered a curated layer reconciling 100% of 68,166 bronze keys with zero rejected rows</strong> using 11 Snowflake Dynamic Tables with key validation, latest-version deduplication, type standardization and lineage tagging, refreshing automatically in 0.6–3.0 seconds.</li>
+              <li><strong>Established end-to-end data observability</strong> with 88 Monte Carlo monitors (freshness, volume, schema, field quality) across 23 tables and both DAGs, and redesigned the daily DAG with timeouts and fail-fast handling to run in about 1–1.5 minutes.</li>
+              <li><strong>Built a RAG agent with a 100% retrieval hit rate@4 and zero false refusals</strong> on a 15-question evaluation set, using hybrid ChromaDB + BM25 retrieval with reciprocal rank fusion, page-level citations and enforced refusals for out-of-scope questions.</li>
+              <li><strong>Made every agent run auditable</strong> with OpenTelemetry tracing in Arize Phoenix (6 spans per question), isolating LLM generation as the latency bottleneck, and connected AI clients to Monte Carlo and the agent through the Model Context Protocol (MCP).</li>
+            </ul>
+            <div class="xp-stack">
+              <span class="chip">Snowflake</span><span class="chip">Apache Airflow</span><span class="chip">Cloud Composer</span>
+              <span class="chip">Google Cloud</span><span class="chip">Monte Carlo</span><span class="chip">RAG</span>
+              <span class="chip">OpenTelemetry</span><span class="chip">MCP</span>
+            </div>
+          </article>
+
+          <article class="xp-item reveal">
+            <p class="xp-meta"><span>JAN 2026 → AUG 2026</span><span>NJ, USA</span></p>
+            <h3>Software Developer</h3>
+            <p class="org">Merit Controls · industrial control systems integration for renewable-energy assets</p>
+            <ul>
+              <li><strong>Established the single source of truth for vendor device data</strong>, adopted across the product team to validate SCADA, PVPC and MPC releases, by independently architecting the OEM database: a star-schema PostgreSQL model normalizing 20,000+ Modbus/DNP3 registers from 15+ BESS and PV-inverter manufacturers into 1,500+ canonical tags via a transaction-safe, auto-triggering ETL.</li>
+              <li><strong>Cut PPC/SCADA commissioning setup from weeks of manual engineering to minutes</strong> by building the PVPC Transformer on that database: a Python, FastAPI and React tool that generates AcSELerator RTAC configuration files for 20+ devices. v1.0/v1.x generate client files from the OEM database and driver files from templates; v2.0, generating both from the database, is underway.</li>
+              <li><strong>Reduced requirements investigation and QA/QC review from hours of searching 100-page project documents to page-cited answers</strong> by architecting a fully local RAG pipeline (Tesseract OCR, all-MiniLM-L6-v2 embeddings, a Chroma vector store, hybrid dense/BM25 retrieval and Qwen-1.5B Instruct), running offline at zero per-query cost.</li>
               <li><strong>Kept OEM datasets current with zero manual intervention</strong> by engineering an event-driven, n8n-orchestrated microservices stack (Docker Compose, Flask API) that re-runs the ETL automatically whenever new device data is ingested.</li>
               <li><strong>Caught regressions before every release</strong> by building GitHub Actions CI/CD pipelines running 100+ automated unit, integration and regression tests with pytest and vitest.</li>
-              <li><strong>Enabling cloud-native deployment and org-wide access</strong> by architecting and leading the ongoing migration of the OEM database and product tooling from a private Linux VM to Microsoft Azure.</li>
+              <li><strong>Drove the migration of the OEM database and product tooling</strong> from a private Linux VM to Microsoft Azure through to its final stage, and handed the work over near completion.</li>
             </ul>
             <div class="xp-stack">
               <span class="chip">PostgreSQL</span><span class="chip">Python</span><span class="chip">FastAPI</span>
@@ -540,12 +634,12 @@
           <article class="xp-item reveal">
             <p class="xp-meta"><span>JAN 2025 → JAN 2026</span><span>FL, USA</span></p>
             <h3>AI Engineer</h3>
-            <p class="org">Copani LLC — AI-powered agentic workflows for customer-service automation</p>
+            <p class="org">Copani LLC · AI-powered workflows for customer-service automation</p>
             <ul>
-              <li><strong>Automated triage of 50+ daily customer emails at 90% accuracy</strong> by building an NLP pipeline on Hugging Face Transformers that encodes inbound messages with BERT and maps them to a curated response library via semantic matching, replacing manual reading and routing.</li>
-              <li><strong>Protected response quality during rollout</strong> by designing the pipeline around a human-in-the-loop verification gate — every model-selected response was reviewed before send, so automation expanded only as measured accuracy justified it.</li>
+              <li><strong>Automated triage of 50+ daily customer emails at roughly 90% accuracy</strong> by building an NLP pipeline on Hugging Face Transformers that encodes inbound messages with BERT and maps them to a curated response library via semantic matching, replacing manual reading and routing.</li>
+              <li><strong>Protected response quality during rollout</strong> by designing the pipeline around a human-in-the-loop verification gate: every model-selected response was reviewed before send, so automation expanded only as measured accuracy justified it.</li>
               <li><strong>Increased email-processing efficiency 90%</strong> by integrating the pipeline with the Gmail API to classify inbound messages and auto-draft client-specific responses under strong data-security and compliance controls.</li>
-              <li><strong>Advanced the system from retrieval toward generation</strong> by prototyping a T5 encoder-decoder model, so responses could be generated rather than selected from fixed templates — extending coverage to inquiries outside the existing library.</li>
+              <li><strong>Advanced the system from retrieval toward generation</strong> by prototyping a T5 encoder-decoder model, so responses could be generated rather than selected from fixed templates, extending coverage to inquiries outside the existing library.</li>
               <li><strong>Adapted a finance-focused LLaMA3 model to domain analysis on commodity hardware</strong> using PEFT with LoRA adapters over a quantized base served locally through Ollama, synthesizing technical, fundamental and sentiment signals into automated investment reports for internal use.</li>
             </ul>
             <div class="xp-stack">
@@ -558,9 +652,9 @@
           <article class="xp-item reveal">
             <p class="xp-meta"><span>JUL 2022 → AUG 2022</span><span>Chennai, India</span></p>
             <h3>Web Developer Intern</h3>
-            <p class="org">National Small Industries Corporation (NSIC) — government small-business enterprise</p>
+            <p class="org">National Small Industries Corporation (NSIC) · government small-business enterprise</p>
             <ul>
-              <li>Architected and launched 10+ responsive web pages in HTML and CSS for a government small-business portal, standardizing reusable UI components across the site.</li>
+              <li>Built and launched 10+ responsive web pages in HTML and CSS for a government small-business portal, standardizing reusable UI components across the site.</li>
               <li>Cut bounce rates 20% and lifted user engagement 15% by refining those components and improving responsive layout behavior across screen sizes.</li>
             </ul>
           </article>
@@ -574,33 +668,131 @@
         <div class="section-head reveal">
           <span class="tag-eyebrow">NAV.PRJ</span>
           <h2>Selected projects</h2>
-          <p>Data engineering, machine learning and deployment applied to real problems — built, tested and shipped.</p>
+          <p>Data engineering, AI and full-stack work applied to real problems: built, tested and shipped. Filter by the work you hire for.</p>
+        </div>
+        <div class="filters" role="group" aria-label="Filter projects">
+          <button class="filter" type="button" data-filter="all" aria-pressed="true">All<span class="n"></span></button>
+          <button class="filter" type="button" data-filter="data" aria-pressed="false">Data<span class="n"></span></button>
+          <button class="filter" type="button" data-filter="ai" aria-pressed="false">AI &amp; ML<span class="n"></span></button>
+          <button class="filter" type="button" data-filter="fullstack" aria-pressed="false">Full stack &amp; deployment<span class="n"></span></button>
         </div>
         <div class="proj-grid">
 
-          <article class="proj feature reveal">
-            <span class="proj-kind">PIPELINE ENGINEERING · ORCHESTRATION · SELF-HOSTED INFRA</span>
-            <h3>Automated Job-Application Pipeline</h3>
-            <p>A scheduled 26-node n8n microservice pipeline that eliminates a daily manual workflow end to end: it retrieves live postings, generates tailored PDFs through a Gemini-backed keyword-extraction agent rendered to LaTeX, and delivers them unattended at 7 AM.</p>
-            <ul>
-              <li>Self-hosted the Docker-containerized n8n instance on a Linux VPS rather than local Docker Desktop, removing the dependency on a developer machine being powered on for scheduled triggers to fire.</li>
-              <li>Solved OAuth 2.0 against Google APIs — which reject raw IP addresses as redirect targets — by mapping the VPS to a stable DuckDNS hostname that survives IP changes without re-registering credentials.</li>
-              <li>Prevented duplicate processing and redundant API spend with a two-tier deduplication layer: in-run URL dedup plus a Supabase (PostgreSQL) persistence check issuing lookups concurrently via <code class="mono">Promise.all</code>, backed by a job-history table keyed on posting URL.</li>
-              <li>Handled long-running external jobs with an asynchronous polling loop (submit → status-check → conditional wait-and-retry) against the Apify Actor REST API instead of blocking on fixed sleeps.</li>
-              <li>Hardened against upstream data-quality issues with a defensive parsing layer — multi-key field fallbacks, HTML stripping and entity decoding, recency and content-length filters — rejecting malformed records before downstream processing.</li>
-            </ul>
-            <div class="proj-stack">
-              <span class="chip">n8n</span><span class="chip">Docker</span><span class="chip">Linux VPS</span>
-              <span class="chip">Supabase</span><span class="chip">REST APIs</span><span class="chip">OAuth 2.0</span>
-              <span class="chip">Google Gemini</span>
+          <article class="proj case reveal" data-cat="data">
+            <span class="proj-kind">CASE STUDY · BLACKBUCK INSIGHTS · DATA PLATFORM + OBSERVABILITY</span>
+            <h3>Medallion Data Platform on Google Cloud and Snowflake</h3>
+            <p class="case-lede">A bronze/silver e-commerce data platform built from scratch for client delivery: 10 source entities, 23 tables and views, validated on the way in, reconciled on the way up, and watched end to end.</p>
+            <div class="flow-wrap" role="img" aria-label="Architecture: Airflow generator DAG writes batches to Cloud Storage; a validation DAG runs 18 checks and loads Snowflake bronze with audit logging; 11 Dynamic Tables build the silver layer; Monte Carlo monitors everything.">
+              <p class="flow-title">Architecture</p>
+              <div class="flow">
+                <div class="node"><b>Generator DAG</b><span>Airflow · Cloud Composer<br>daily synthetic batches</span></div>
+                <div class="arrow" aria-hidden="true"></div>
+                <div class="node store"><b>Cloud Storage</b><span>landing zone<br>10 entities</span></div>
+                <div class="arrow" aria-hidden="true"></div>
+                <div class="node"><b>Validation DAG</b><span>18 automated checks<br>fail-fast, timeouts</span></div>
+                <div class="arrow" aria-hidden="true"></div>
+                <div class="node store"><b>Snowflake Bronze</b><span>raw loads<br>per-table audit log</span></div>
+                <div class="arrow" aria-hidden="true"></div>
+                <div class="node store"><b>Snowflake Silver</b><span>11 Dynamic Tables<br>dedup · types · lineage</span></div>
+              </div>
+              <div class="flow-band"><b>OBSERVED BY</b>Monte Carlo · 88 monitors for freshness, volume, schema and field quality across 23 tables and both DAGs</div>
             </div>
-            <p class="proj-note">Private repository — walkthrough available on request.</p>
+            <div class="case-meta">
+              <span class="chip">100% of 68,166 keys reconciled</span><span class="chip">0 rejected rows</span><span class="chip">144 audited loads</span><span class="chip">~1–1.5 min daily run</span>
+            </div>
+            <details>
+              <summary>Read the case study</summary>
+              <div class="case-grid">
+                <div><h4>Problem</h4><p>Build a reliable, repeatable path from raw e-commerce source data to curated, analysis-ready tables, with proof that every record landed and an early warning when anything drifts.</p></div>
+                <div><h4>My role</h4><p>Designed and built it end to end: the data contract, both Airflow DAGs, the bronze and silver layers in Snowflake, and the Monte Carlo monitoring.</p></div>
+                <div><h4>Key decisions</h4><ul>
+                  <li><strong>Validate before load:</strong> 18 checks gate each batch, so bad data never reaches bronze.</li>
+                  <li><strong>Audit every load:</strong> per-table audit logging makes each run traceable (144 audited loads).</li>
+                  <li><strong>Dynamic Tables for silver:</strong> declarative refresh in 0.6–3.0 s, no extra scheduler to maintain.</li>
+                  <li><strong>Single-session load with timeouts:</strong> 10 tables in 39–46 s; full daily run about 1–1.5 minutes.</li>
+                </ul></div>
+                <div><h4>Result</h4><ul>
+                  <li>100% of 68,166 bronze keys reconciled into silver, zero rejected rows.</li>
+                  <li>88 Monte Carlo monitors covering freshness, volume, schema and field quality.</li>
+                  <li>4,500–4,800 records ingested per daily run, fully audited.</li>
+                </ul></div>
+                <div style="grid-column:1/-1"><h4>What I'd do differently</h4><p>Add a gold layer of business-facing marts, express the silver transformations as dbt models with tests and docs, and replace the synthetic source with a real change-data-capture feed.</p></div>
+              </div>
+            </details>
+            <p class="proj-note">Client work (synthetic data) · no public repository. Walkthrough available on request.</p>
           </article>
 
-          <article class="proj reveal">
-            <span class="proj-kind">DATA ENGINEERING · FORECASTING</span>
-            <h3>Small Business Index — Analysis &amp; Forecasting</h3>
-            <p>A PySpark ETL pipeline turning 5 years of raw sales data into forecast-ready datasets — imputing missing values, removing outliers, normalizing ranges and encoding categorical features. Six ML models benchmarked (XGBoost won) to model the Fiserv Small Business Index across 20 NAICS sectors and 50 U.S. states, explaining ~90% of variance (R² ≈ 0.90), served through a Streamlit app for sector and state analysis.</p>
+          <article class="proj reveal" data-cat="fullstack data">
+            <span class="proj-kind">FULL STACK · MERIT CONTROLS</span>
+            <h3>PVPC Transformer</h3>
+            <p>A full-stack Python, FastAPI and React tool built on the OEM PostgreSQL database that generates AcSELerator RTAC configuration files for 20+ devices, cutting PPC/SCADA commissioning setup from weeks of manual engineering to minutes. v1.0 and v1.x generate client files from the database and driver files from templates; v2.0, generating both from the database, is underway.</p>
+            <div class="proj-stack">
+              <span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">React</span><span class="chip">PostgreSQL</span><span class="chip">GitHub Actions</span>
+            </div>
+            <p class="proj-note">Built at Merit Controls · proprietary, walkthrough available on request.</p>
+          </article>
+
+
+          <article class="proj reveal" data-cat="ai">
+            <span class="proj-kind">GENERATIVE AI · DATABRICKS ACADEMY</span>
+            <h3>Generative AI Engineering on Databricks</h3>
+            <p>Databricks Academy coursework on building compound AI systems: RAG over Unity Catalog-governed data, agents that call Unity Catalog functions and managed MCP servers as tools, multi-agent orchestration with the OpenAI Agents SDK (handoffs, agents-as-tools, evaluator-optimizer loops), and MLflow GenAI evaluation with built-in and custom LLM judges.</p>
+            <div class="proj-stack">
+              <span class="chip">Databricks</span><span class="chip">RAG</span><span class="chip">Unity Catalog</span><span class="chip">MCP</span><span class="chip">MLflow evaluation</span><span class="chip">LLM-as-judge</span>
+            </div>
+            <p class="proj-note">Databricks Academy course · completed 2026</p>
+          </article>
+
+          
+
+
+          <article class="proj feature reveal" data-cat="data ai fullstack">
+            <span class="proj-kind">AGENTIC PIPELINE · GOOGLE CLOUD · SELF-HOSTED INFRA</span>
+            <h3>Self-Hosted AI Job-Application Pipeline</h3>
+            <p>A scheduled 10-stage pipeline that eliminates a daily manual workflow: it ingests postings from four job sources, tailors a resume to each through a Vertex AI Gemini agent, renders LaTeX to PDF, verifies the compiled page count, and emails a ranked digest unattended every morning.</p>
+            <div class="flow-wrap" role="img" aria-label="Pipeline: scheduler pulls four job sources, deduplicates in Supabase, tailors with Vertex AI Gemini, renders LaTeX to PDF with a page check, and emails a digest via Gmail, all on a GCP Compute Engine VM behind Caddy.">
+              <p class="flow-title">Pipeline</p>
+              <div class="flow">
+                <div class="node"><b>Scheduler</b><span>n8n cron<br>daily run</span></div>
+                <div class="arrow" aria-hidden="true"></div>
+                <div class="node"><b>4 job sources</b><span>ingest + defensive<br>parsing</span></div>
+                <div class="arrow" aria-hidden="true"></div>
+                <div class="node store"><b>Supabase</b><span>dedup on posting URL<br>idempotent runs</span></div>
+                <div class="arrow" aria-hidden="true"></div>
+                <div class="node"><b>Vertex AI Gemini</b><span>tailor resume<br>least-privilege SA</span></div>
+                <div class="arrow" aria-hidden="true"></div>
+                <div class="node"><b>LaTeX → PDF</b><span>compile +<br>page-count check</span></div>
+                <div class="arrow" aria-hidden="true"></div>
+                <div class="node"><b>Gmail digest</b><span>ranked, via<br>OAuth 2.0</span></div>
+              </div>
+              <div class="flow-band"><b>RUNS ON</b>GCP Compute Engine · Docker Compose on an internal network · Caddy reverse proxy with automated TLS</div>
+            </div>
+            <ul>
+              <li>Deployed on a GCP Compute Engine VM (Debian, Docker Compose, reserved static IP) behind a Caddy reverse proxy with automated TLS, keeping the workflow engine off the public internet on an internal Docker network.</li>
+              <li>Separated machine and user trust: inference runs through a least-privilege service account, while Drive, Docs and Gmail access goes through OAuth 2.0 user consent.</li>
+              <li>Root-caused a failing integration from HTTP status semantics (401 to API enablement, 404 to a regional endpoint mismatch) rather than by trial and error.</li>
+              <li>Made runs idempotent with a Supabase (PostgreSQL) deduplication check keyed on posting URL, asynchronous polling for long-running jobs, and defensive parsing that rejects malformed records upstream.</li>
+            </ul>
+            <div class="proj-stack">
+              <span class="chip">GCP Compute Engine</span><span class="chip">Vertex AI Gemini</span><span class="chip">Docker</span>
+              <span class="chip">Caddy</span><span class="chip">OAuth 2.0</span><span class="chip">Supabase</span><span class="chip">n8n</span>
+            </div>
+            <p class="proj-note">Private repository · walkthrough available on request.</p>
+          </article>
+
+          <article class="proj reveal" data-cat="ai">
+            <span class="proj-kind">AI AGENTS · TOOLING</span>
+            <h3>AI Agent Skills and Tooling for Claude</h3>
+            <p>Custom Claude agent skills that deliver targeted business requests end to end: a job-search agent that orchestrates multiple job-board and data connectors with scoring rules and cost guardrails, and a resume agent that compiles and verifies its own output before delivery.</p>
+            <div class="proj-stack">
+              <span class="chip">Claude</span><span class="chip">Agent skills</span><span class="chip">Tool orchestration</span><span class="chip">Python</span>
+            </div>
+          </article>
+
+          <article class="proj reveal" data-cat="data ai">
+            <span class="proj-kind">DATA SCIENCE · FORECASTING</span>
+            <h3>Small Business Index: Analysis &amp; Forecasting</h3>
+            <p>A PySpark ETL pipeline turning 5 years of raw sales data into forecast-ready datasets by imputing missing values, removing outliers, normalizing ranges and encoding categorical features. Six ML models benchmarked (XGBoost won) to model the Fiserv Small Business Index across 20 NAICS sectors and 50 U.S. states, explaining ~90% of variance (R-squared ≈ 0.90), served through a Streamlit app for sector and state analysis.</p>
             <div class="proj-stack">
               <span class="chip">PySpark</span><span class="chip">Apache Spark</span><span class="chip">ETL</span>
               <span class="chip">XGBoost</span><span class="chip">Streamlit</span>
@@ -608,40 +800,40 @@
             <a class="proj-link" href="https://github.com/navaneeth1228/Sales-Index-Forecasting-For-Business-Growth" target="_blank" rel="noopener">View on GitHub →</a>
           </article>
 
-          <article class="proj reveal">
+          <article class="proj reveal" data-cat="ai fullstack">
             <span class="proj-kind">MLOPS · DEPLOYMENT</span>
             <h3>Airbnb Price Recommendation Model</h3>
-            <p>Predicts Airbnb listing prices at R² ≈ 0.92 by processing raw data with SQLite3, engineering features from location, property type and amenity attributes, and hyperparameter-tuning regression models. Shipped as a Dockerized service with managed model storage, experiment tracking and versioned artifacts through DagsHub, exposed via Streamlit for real-time price exploration and neighborhood comparison.</p>
+            <p>Predicts Airbnb listing prices at R-squared ≈ 0.92 by processing raw data with SQLite3, engineering features from location, property type and amenity attributes, and hyperparameter-tuning regression models. Shipped as a Dockerized service with managed model storage, experiment tracking and versioned artifacts through DagsHub, exposed via Streamlit for real-time price exploration and neighborhood comparison.</p>
             <div class="proj-stack">
               <span class="chip">Docker</span><span class="chip">DagsHub</span><span class="chip">SQLite3</span><span class="chip">Streamlit</span>
             </div>
             <a class="proj-link" href="https://github.com/navaneeth1228/Airbnb_Price_Predictor" target="_blank" rel="noopener">View on GitHub →</a>
           </article>
 
-          <article class="proj reveal">
+          <article class="proj reveal" data-cat="data">
             <span class="proj-kind">DATA ANALYSIS · VISUALIZATION</span>
             <h3>NYC Taxi Tipping Pattern Analysis</h3>
-            <p>Analyzed 3 million NYC taxi trip records in Pandas across passenger, trip and socioeconomic dimensions to uncover what actually drives tipping — surfacing trends across payment type, fare, trip duration, surcharges and borough income levels to support operational planning and service optimization.</p>
+            <p>Analyzed 3 million NYC taxi trip records in Pandas across passenger, trip and socioeconomic dimensions to uncover what actually drives tipping, surfacing trends across payment type, fare, trip duration, surcharges and borough income levels to support operational planning and service optimization.</p>
             <div class="proj-stack">
               <span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">EDA</span><span class="chip">Visualization</span>
             </div>
             <a class="proj-link" href="https://github.com/navaneeth1228/NYC-Taxi-Tipping-Pattern-Analysis" target="_blank" rel="noopener">View on GitHub →</a>
           </article>
 
-          <article class="proj reveal">
+          <article class="proj reveal" data-cat="data fullstack">
             <span class="proj-kind">DATA MODELING · SQL</span>
             <h3>Library Management System</h3>
-            <p>A Third Normal Form (3NF) relational schema for a transactional library system — modeling books, members, loans and reservations with ACID-compliant transactions and referential-integrity constraints, plus SQL queries and an interface covering the full borrowing lifecycle: search, checkout, return and availability.</p>
+            <p>A Third Normal Form (3NF) relational schema for a transactional library system, modeling books, members, loans and reservations with ACID-compliant transactions and referential-integrity constraints, plus SQL queries and an interface covering the full borrowing lifecycle: search, checkout, return and availability.</p>
             <div class="proj-stack">
               <span class="chip">SQL</span><span class="chip">Normalization</span><span class="chip">Database Design</span><span class="chip">Full-Stack</span>
             </div>
             <a class="proj-link" href="https://github.com/navaneeth1228/Library_Management_DMQL" target="_blank" rel="noopener">View on GitHub →</a>
           </article>
 
-          <article class="proj reveal">
+          <article class="proj reveal" data-cat="ai">
             <span class="proj-kind">COMPUTER VISION</span>
             <h3>Face Recognition Check-In System</h3>
-            <p>A real-time identity check-in system combining Haar-cascade face detection with embedding-based classification in OpenCV, recognizing enrolled individuals from a live camera feed. Tuned embedding-distance tolerance thresholds to stay reliable under varied lighting — rejecting unknown faces rather than misclassifying them — and logged verified check-ins to Excel-based attendance records.</p>
+            <p>A real-time identity check-in system combining Haar-cascade face detection with embedding-based classification in OpenCV, recognizing enrolled individuals from a live camera feed. Tuned embedding-distance tolerance thresholds to stay reliable under varied lighting (rejecting unknown faces rather than misclassifying them) and logged verified check-ins to Excel-based attendance records.</p>
             <div class="proj-stack">
               <span class="chip">OpenCV</span><span class="chip">Python</span><span class="chip">ML Engineering</span>
             </div>
@@ -665,25 +857,25 @@
             <h3>Languages</h3>
             <div class="chips">
               <span class="chip">Python</span><span class="chip">SQL</span><span class="chip">PySpark</span>
-              <span class="chip">JavaScript</span><span class="chip">R</span><span class="chip">C/C++</span>
+              <span class="chip">R</span><span class="chip">C/C++</span>
               <span class="chip">MATLAB</span><span class="chip">Haskell</span>
             </div>
           </div>
           <div class="skill-group reveal">
             <h3>Data Engineering</h3>
             <div class="chips">
-              <span class="chip">ETL / ELT</span><span class="chip">Star-schema modeling</span><span class="chip">3NF normalization</span>
-              <span class="chip">Event-driven pipelines</span><span class="chip">Cron scheduling</span><span class="chip">DAG orchestration (n8n)</span>
-              <span class="chip">Apache Airflow</span><span class="chip">Apache Spark</span><span class="chip">Hadoop</span>
-              <span class="chip">Databricks</span><span class="chip">Pandas</span><span class="chip">Data validation</span>
+              <span class="chip">Apache Airflow</span><span class="chip">Cloud Composer</span><span class="chip">dbt</span>
+              <span class="chip">Medallion architecture</span><span class="chip">ETL / ELT</span><span class="chip">Star-schema modeling</span>
+              <span class="chip">Event-driven pipelines</span><span class="chip">Audit logging &amp; reconciliation</span><span class="chip">Data validation</span>
+              <span class="chip">Apache Spark</span><span class="chip">Databricks</span><span class="chip">Pandas</span>
             </div>
           </div>
           <div class="skill-group reveal">
             <h3>Databases &amp; Storage</h3>
             <div class="chips">
               <span class="chip">PostgreSQL</span><span class="chip">MySQL</span><span class="chip">SQLite3</span>
-              <span class="chip">Snowflake</span><span class="chip">Supabase</span><span class="chip">Neo4j</span>
-              <span class="chip">Chroma</span>
+              <span class="chip">Snowflake (Dynamic Tables)</span><span class="chip">BigQuery</span><span class="chip">Supabase</span>
+              <span class="chip">Neo4j</span><span class="chip">ChromaDB</span>
             </div>
           </div>
           <div class="skill-group reveal">
@@ -693,7 +885,8 @@
               <span class="chip">TensorFlow</span><span class="chip">Keras</span><span class="chip">Hugging Face Transformers</span>
               <span class="chip">BERT</span>
               <span class="chip">T5</span><span class="chip">LLaMA3</span><span class="chip">PEFT / LoRA</span>
-              <span class="chip">RAG</span><span class="chip">LangChain</span><span class="chip">LangGraph</span>
+              <span class="chip">RAG</span><span class="chip">MCP</span><span class="chip">Claude</span>
+              <span class="chip">LLM-as-judge evaluation</span><span class="chip">LangChain</span><span class="chip">LangGraph</span>
               <span class="chip">Ollama</span><span class="chip">OpenCV</span>
             </div>
           </div>
@@ -707,8 +900,9 @@
           <div class="skill-group reveal">
             <h3>Cloud, DevOps &amp; Testing</h3>
             <div class="chips">
-              <span class="chip">Microsoft Azure</span><span class="chip">AWS</span><span class="chip">Docker</span>
-              <span class="chip">Docker Compose</span><span class="chip">Linux</span><span class="chip">VPS self-hosting</span>
+              <span class="chip">Google Cloud</span><span class="chip">Microsoft Azure</span><span class="chip">AWS</span><span class="chip">Docker</span>
+              <span class="chip">Kubernetes</span><span class="chip">Terraform</span>
+              <span class="chip">Docker Compose</span><span class="chip">Linux</span><span class="chip">Self-hosted infrastructure</span>
               <span class="chip">Git</span><span class="chip">GitHub Actions</span><span class="chip">CI/CD</span>
               <span class="chip">pytest</span><span class="chip">vitest</span>
             </div>
@@ -721,8 +915,9 @@
             </div>
           </div>
           <div class="skill-group reveal">
-            <h3>Analytics &amp; Collaboration</h3>
+            <h3>Observability, Analytics &amp; Collaboration</h3>
             <div class="chips">
+              <span class="chip">Monte Carlo</span><span class="chip">OpenTelemetry</span><span class="chip">Arize Phoenix</span>
               <span class="chip">Power BI</span><span class="chip">Tableau</span><span class="chip">DagsHub</span>
               <span class="chip">Jira</span><span class="chip">Confluence</span>
             </div>
@@ -736,7 +931,7 @@
       <div class="wrap">
         <div class="section-head reveal">
           <span class="tag-eyebrow">NAV.EDU</span>
-          <h2>Education &amp; recognition</h2>
+          <h2>Education, certifications &amp; recognition</h2>
         </div>
         <div class="edu-grid">
           <article class="edu reveal">
@@ -750,10 +945,22 @@
             <p>Annamalai University</p>
           </article>
         </div>
+        <div class="edu-grid" style="margin-top:20px">
+          <article class="edu reveal">
+            <span class="when">2026 · CERTIFICATIONS</span>
+            <h3>AWS Certified Cloud Practitioner</h3>
+            <p><a href="https://cp.certmetrics.com/amazon/en/public/verify/credential/a039391f8dec40499fc58ccbf89b00fb" target="_blank" rel="noopener">Verify credential →</a></p>
+          </article>
+          <article class="edu reveal">
+            <span class="when">2026 · DATA &amp; AI</span>
+            <h3>Monte Carlo 101 · Generative AI Engineering with Databricks</h3>
+            <p>Monte Carlo (Data and AI observability), Certificate of Completion · Databricks Academy, course completed</p>
+          </article>
+        </div>
         <div class="award reveal">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--signal)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.5 13 17 22l-5-3-5 3 1.5-9"/></svg>
           <div>
-            <b>1st place — Startup Boot Camp, Elysium Security (Buffalo, NY)</b>
+            <b>1st place, Startup Boot Camp, Elysium Security (Buffalo, NY)</b>
             <span>Pitched a YOLO-based real-time crime-detection system; judged on technical execution and market potential.</span>
           </div>
         </div>
@@ -765,11 +972,11 @@
       <div class="wrap contact">
         <div class="section-head reveal" style="margin-bottom:0">
           <span class="tag-eyebrow">NAV.CONNECT</span>
-          <h2>Let's build something that decides for itself</h2>
-          <p>I'm open to roles in data engineering, AI/ML engineering and full-stack data products. Email is the fastest way to reach me.</p>
+          <h2>Let's build Data and AI you can trust</h2>
+          <p>I'm open to roles in data engineering, data pipelines, AI engineering and full-stack data products. Email is the fastest way to reach me.</p>
         </div>
         <div class="contact-row reveal">
-          <a class="btn btn-primary" href="mailto:navaneethakannan2001@gmail.com">Email me</a>
+          <a class="btn btn-primary" href="mailto:navaneet.aru@gmail.com">Email me</a>
           <a class="btn btn-ghost" href="https://www.linkedin.com/in/navaneethakannan-arumugam-99b39a422/" target="_blank" rel="noopener">LinkedIn</a>
           <a class="btn btn-ghost" href="https://github.com/navaneeth1228" target="_blank" rel="noopener">GitHub</a>
           <a class="btn btn-ghost" href="./Nav_Arumugam_Resume.pdf" target="_blank" rel="noopener">Résumé (PDF)</a>
@@ -777,6 +984,11 @@
       </div>
     </section>
   </main>
+
+  <a class="resume-fab" id="resumeFab" href="./Nav_Arumugam_Resume.pdf" target="_blank" rel="noopener" aria-label="Download résumé (PDF)">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M5 21h14"/></svg>
+    Résumé
+  </a>
 
   <footer>
     <div class="wrap foot-row">
@@ -849,6 +1061,53 @@
         dot.setAttribute('cy', y.toFixed(1));
         x += stepX;
       }, 28);
+    })();
+
+
+    // ---- v2: project filters ----
+    (function () {
+      var btns = document.querySelectorAll('.filter');
+      var cards = document.querySelectorAll('.proj[data-cat]');
+      btns.forEach(function (b) {
+        var f = b.getAttribute('data-filter');
+        var n = f === 'all' ? cards.length : Array.prototype.filter.call(cards, function (c) { return c.dataset.cat.split(' ').indexOf(f) > -1; }).length;
+        b.querySelector('.n').textContent = n;
+        b.addEventListener('click', function () {
+          btns.forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+          cards.forEach(function (c) {
+            var show = f === 'all' || c.dataset.cat.split(' ').indexOf(f) > -1;
+            c.classList.toggle('is-hidden', !show);
+            if (show) c.classList.add('in');
+          });
+        });
+      });
+    })();
+
+    // ---- v2: experience "show more" ----
+    (function () {
+      document.querySelectorAll('.xp-item ul').forEach(function (ul) {
+        var extra = ul.children.length - 3;
+        if (extra < 1) return;
+        ul.classList.add('collapsed');
+        var btn = document.createElement('button');
+        btn.type = 'button'; btn.className = 'more-btn';
+        btn.setAttribute('aria-expanded', 'false');
+        btn.textContent = 'Show ' + extra + ' more';
+        btn.addEventListener('click', function () {
+          var open = ul.classList.toggle('collapsed') === false;
+          btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+          btn.textContent = open ? 'Show less' : 'Show ' + extra + ' more';
+        });
+        ul.insertAdjacentElement('afterend', btn);
+      });
+    })();
+
+    // ---- v2: sticky résumé button (mobile) ----
+    (function () {
+      var fab = document.getElementById('resumeFab');
+      var hero = document.querySelector('.hero');
+      if (!fab || !hero || !('IntersectionObserver' in window)) { if (fab) fab.classList.add('show'); return; }
+      new IntersectionObserver(function (e) { fab.classList.toggle('show', !e[0].isIntersecting); }).observe(hero);
     })();
 
     // ---- Scroll reveal ----
